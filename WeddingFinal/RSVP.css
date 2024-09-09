@@ -1,0 +1,28 @@
+@font-face {
+    font-family: 'KugileDemo'; /* Name of your custom font */
+    src: url('fonts/Kugile_Demo.ttf') format('truetype'),
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+	font-family: 'Ariel', sans-serif; /* Apply custom font */
+    text-align: center;
+    background-image: url('photos/flowersPeony.jpg');
+    align-items: center;
+}
+
+.formNav {
+	background-color: #FFFDD0;
+	margin-left: 10%;
+	margin-right: 10%;
+	border-width: 1px;
+    border-style: solid;
+    border-color: #000000;
+    padding: 10px;
+}
+
+#RSVPH1{
+	font-family: 'KugileDemo', sans-serif; /* Apply custom font */
+    text-align: center;
+}

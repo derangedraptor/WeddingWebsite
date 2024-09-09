@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RSVP</title>
+    <link rel="stylesheet" href="RSVP.css"> <!-- Link to your CSS file -->
+    <script type="text/javascript" 
+    src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+        (function() {
+        // https://dashboard.emailjs.com/admin/account
+            emailjs.init({
+            publicKey: "g6qW4XFvOPpuqCNNT",
+            });
+        })();
+    </script>
+    <script src="SendMail.js"></script>
+</head>
+<body>
+    <div id = "formNav" class="formNav">
+        <h1 id="RSVPH1">RSVP</h1>
+        <p>Please respond per individual not per party!</p>
+    
+        <label for="name">Full Name:</label>
+        <input type="text" id="name" name="name" required>
+        <div id="radio1">
+            <p> Will you be attending? </p>
+                <input type="radio" id="accepted" name="attending" value="yes">
+                <label for="accept">Accept</label>
+                <input type="radio" id="declined" name="attending" value="no">
+                <label for="decline">Decline</label>
+        </div><br>
+        <div id = "radio2">
+        <p>Please select your entree of choice</p>
+            <input type="radio" id="meat" name="meal" value="Meat">
+            <label for="meat">Meat</label>
+            <input type="radio" id="vegetarian" name="meal" value="Vegetarian">
+            <label for="vegetarian">Vegetarian</label>
+        </div><br>
+        <label for="dietRestrictions">Dietary Restrictions:</label>
+        <input type="text" id="dietRestrictions" name="dietRestrictions" required><b></b>
+
+        <button type="submit" onclick="sendMail()">Submit</button>
+    </div>
+    <a href="MainWeddingPage.html">Back to Home</a>
+</body>
+</html>
