@@ -1,0 +1,112 @@
+@font-face {
+    font-family: 'KugileDemo'; /* Name of your custom font */
+    src: url('fonts/Kugile_Demo.ttf') format('truetype'),
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: 'Ariel', sans-serif; /* Apply custom font */
+    margin: 0;
+    padding: 0;
+    background-color: #f0e6db;
+    background-image: url('photos/flowersPeony.jpg');
+}
+
+main {
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+.topnav {
+    position: relative;
+    background-color: #380507;
+    overflow: hidden;
+    height: 50px; /* Height for the topnav bar */
+}
+
+.links {
+    position: fixed;
+    top: 0;
+    right: -100%; /* Initially hidden off-screen on the right */
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    background-color: rgba(0, 0, 0, 0.9); /* Dark overlay */
+    z-index: 1; /* Appear on top */
+    transition: right 0.3s ease-in-out; /* Smooth slide from right */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.links a {
+    padding: 15px;
+    text-decoration: none;
+    font-size: 25px;
+    color: white;
+    text-align: center;
+    display: block;
+    transition: 0.3s;
+}
+
+.links h1{
+    justify-content: top;
+    margin-bottom: 10%;
+    white-space: pre-line;
+    text-decoration: none;
+    font-size: 25px;
+    color: white;
+    text-align: center;
+    display: block;
+    transition: 0.3s;
+    border-bottom: 2px solid white;
+}
+
+.links a:hover {
+    background-color: #575757;
+}
+
+.icon {
+    position: fixed; /* Keep the icon fixed at the top right */
+    right: 0;
+    top: 0;
+    padding: 14px 16px;
+    background-color: #380507;
+    z-index: 2; /* Make sure the icon stays above the overlay */
+    cursor: pointer;
+}
+
+.icon i {
+    font-size: 24px;
+    color: white;
+}
+
+
+.formNav {
+    background-color: #FFFDD0;
+    margin-top: 15%;
+    margin-left: 10%;
+    margin-right: 10%;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #000000;
+    padding: 10px;
+}
+
+#RSVPH1{
+    font-family: 'KugileDemo', sans-serif; /* Apply custom font */
+    text-align: center;
+}
+
+
+footer {
+    background-color: #380507; 
+    color: white;
+    text-align: center;
+    padding: 10px;
+    margin-top: auto 0;
+}
