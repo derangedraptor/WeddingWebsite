@@ -21,3 +21,22 @@ function hamburgerDrop() {
     x.style.right = "-100%"; // Slide out of view to the right
   }
 }
+
+/* Toggles automatically between desktop and mobile modes */
+function handleDeviceSpecificCode() 
+{
+  if (/Mobi|Android|iPhone|iPad|iPod/.test(navigator.userAgent)) 
+  {
+    // Code for mobile devices
+    console.log("Mobile device detected");
+    var dropdown = document.getElementById('hamburger');
+    dropdown.style.display = "flex";
+  } 
+  else 
+  {
+    // Code for desktop
+    console.log("Desktop detected");
+    var toolbar = document.getElementById('weddingToolbar');
+    toolbar.style.display = "flex";
+  }
+}

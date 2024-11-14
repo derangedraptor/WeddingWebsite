@@ -19,11 +19,13 @@
     </script>
     <script src="SendMail.js"></script>
 </head>
-<body>
+<body onload="handleDeviceSpecificCode()">
+    <div class = "namePlate" id="nameplate">
+        <h1>RSVP</h1>
+    </div>
 
      <!-- Top Navigation Menu -->
     <div class="topnav">
-        <a href="#home" class="active"> </a>
         <!-- Navigation links (hidden by default) -->
         <div class="links" id="myLinks">
             <h1> Cammy & James 
@@ -38,15 +40,22 @@
             <a href="#gallery">Gallery</a>
         </div>
         <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
-        <a href="javascript:void(0);" class="icon" onclick="hamburgerDrop()">
+        <a href="javascript:void(0);" class="hamburger" id="hamburger" onclick="hamburgerDrop()" style="display: none;">
             <i class="fa fa-bars"></i>
         </a>
+        <!-- "Toolbar menu" / "Toolbar for nav links"-->
+        <nav id="weddingToolbar" style="display: none;">
+            <a href="MainWeddingPage.html">Home</a>
+            <a href="#our-story">Our Story</a>
+            <a href="WeddingDetails.html">Wedding Details</a>
+            <a href="RSVP.html">RSVP</a>
+            <a href="#accommodations">Accommodations</a>
+            <a href="#registry">Registry</a>
+            <a href="#gallery">Gallery</a>
+        </nav>
     </div>
-    
-    <main>
 
     <div id = "formNav" class="formNav">
-        <h1 id="RSVPH1">RSVP</h1>
         <p>Please respond per individual not per party!</p>
     
         <label for="name">Full Name:</label>
@@ -70,7 +79,6 @@
 
         <button type="submit" onclick="sendMail()">Submit</button>
     </div>
-    </main>
     <footer>
         <p>A website creation of James Brechtel</p>
         <p>Follow us on social media: <a href="#">Instagram</a>, <a href="#">Facebook</a></p>
