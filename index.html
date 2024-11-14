@@ -10,10 +10,15 @@
     <link rel="stylesheet" href="MainWeddingCSS.css">
     <script type = "text/javascript" src="weddingJavaScript.js"></script>
 </head>
-<body>
+<body onload="handleDeviceSpecificCode()">
+    
+    <!-- NamePlateSection -->
+    <div class = "namePlate" id="nameplate">
+        <h1>Cammy & James</h1>
+    </div>
+
     <!-- Top Navigation Menu -->
     <div class="topnav">
-        <a href="#home" class="active"> </a>
         <!-- Navigation links (hidden by default) -->
         <div class="links" id="myLinks">
             <h1> Cammy & James 
@@ -22,54 +27,54 @@
             <a href="#our-story">Our Story</a>
             <a href="WeddingDetails.html">Wedding Details</a>
             <a href="RSVP.html">RSVP</a>
-            <a href="#rsvp">About</a>
             <a href="#accommodations">Accommodations</a>
             <a href="#registry">Registry</a>
             <a href="#gallery">Gallery</a>
         </div>
         <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
-        <a href="javascript:void(0);" class="icon" onclick="hamburgerDrop()">
+        <a href="javascript:void(0);" class="hamburger" id="hamburger" onclick="hamburgerDrop()" style="display: none;">
             <i class="fa fa-bars"></i>
         </a>
-    </div>
-
-    <!-- NamePlateSection -->
-    <div class = "namePlate">
-        <h1>Cammy Yu 
-            &
-         James Brechtel</h1>
+        <!-- "Toolbar menu" / "Toolbar for nav links"-->
+        <nav id="weddingToolbar" style="display: none;">
+            <a href="MainWeddingPage.html">Home</a>
+            <a href="#our-story">Our Story</a>
+            <a href="WeddingDetails.html">Wedding Details</a>
+            <a href="RSVP.html">RSVP</a>
+            <a href="#accommodations">Accommodations</a>
+            <a href="#registry">Registry</a>
+            <a href="#gallery">Gallery</a>
+        </nav>
     </div>
 
     <!-- gallery carousel -->
     <div class="carousel-container">
+        <div class="overlay-text" id="marriedText">We're getting married!</div> <!-- Text remains fixed here -->
         <div class="carousel">
-            <img src="photos/flower1.jpg" alt="Image 1">
-            <img src="photos/flower2.jpg" alt="Image 2">
-            <img src="photos/flower3.jpg" alt="Image 3">
-            <img src="photos/flower4.jpg" alt="Image 4">
-            <img src="photos/flowersPeony.jpg" alt="Image 5">
-            <img src="photos/peonyBanner.jpg" alt="Image 6">
-            <img src="photos/peonyBanner2.jpg" alt="Image 7">
-            <img src="photos/prop1.jpg" alt="Image 8">
-            <img src="photos/prop2.jpg" alt="Image 9">
-            <img src="photos/prop3.jpg" alt="Image 10">
+            <img src="photos/treehug.jpeg" alt="Image 1">
+            <img src="photos/treekiss.jpeg" alt="Image 2">
+            <img src="photos/vows.jpeg" alt="Image 3">
+            <img src="photos/waterkiss.jpeg" alt="Image 4">
+            <img src="photos/spin.jpeg" alt="Image 5">
+            <img src="photos/dockkiss.jpeg" alt="Image 6">
             <!-- Duplicate images to create seamless looping -->
-            <img src="photos/flower1.jpg" alt="Image 1">
-            <img src="photos/flower2.jpg" alt="Image 2">
-            <img src="photos/flower3.jpg" alt="Image 3">
-            <img src="photos/flower4.jpg" alt="Image 4">
-            <img src="photos/flowersPeony.jpg" alt="Image 5">
-            <img src="photos/peonyBanner.jpg" alt="Image 6">
-            <img src="photos/peonyBanner2.jpg" alt="Image 7">
-            <img src="photos/prop1.jpg" alt="Image 8">
-            <img src="photos/prop2.jpg" alt="Image 9">
-            <img src="photos/prop3.jpg" alt="Image 10">
+            <img src="photos/treehug.jpeg" alt="Image 1">
+            <img src="photos/treekiss.jpeg" alt="Image 2">
+            <img src="photos/vows.jpeg" alt="Image 3">
+            <img src="photos/waterkiss.jpeg" alt="Image 4">
+            <img src="photos/spin.jpeg" alt="Image 5">
+            <img src="photos/dockkiss.jpeg" alt="Image 6">
         </div>
     </div>
 
+  <!-- Main Content Section -->
+    <div class="content">
+        <h2>Welcome!</h2>
+        <p>We are so excited to celebrate our special day with you! Please find all the details you need about our wedding here. 
     <!-- CountDown -->
+    
     <section id="countdownSection" class="countdownClass">
-        <h1 id="countdownH1">October 25th, 2025</h1>
+        <h1 id="countdownH1">Countdown to October 25th, 2025</h1>
         <div id="countdown"></div>
          <script>
                 // Set the date we're counting down to
@@ -105,17 +110,7 @@
             </script>
     </section>
 
-     <!-- Banner Section -->
-    <div class="banner">
-
-    </div>
-
-    <!-- Main Content Section -->
-    <div class="content">
-        <h2>Welcome to our wedding website!</h2>
-        <p>We are so excited to celebrate our special day with you! Please find all the details you need about our wedding here.</p>
-        <p class = "rsvp">Click the link below to RSVP to the wedding.</p>
-        <a href="RSVP.html">RSVP for the Wedding</a>
+</p>
     </div>
     <footer>
         <p>A website creation of James Brechtel</p>
