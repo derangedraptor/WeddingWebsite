@@ -28,33 +28,6 @@ img {
     max-width: 100%;
 }
 
-.carousel-container {
-  height: 50vh; /* Relative height for responsiveness */
-  max-height: 500px;
-  overflow: hidden;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  position: relative;
-
-}
-
-.carousel {
-  display: flex;
-  height: 100%;
-  white-space: nowrap; /* Prevent line breaks */
-  position: absolute; /* Ensure it’s positioned for smooth scrolling */
-  will-change: transform; /* Optimize performance */
-
-}
-
-.carousel img {
-  height: 100%; /* Fit the image to container height */
-  object-fit: cover; /* Maintain aspect ratio and cover the area */
-  flex-shrink: 0; /* Prevent shrinking */
-}
-
-
-
 /* Overlay text styling */
 .overlay-text {
     font-family: 'PinyonScript', sans-serif;
@@ -90,33 +63,6 @@ img {
     margin: 5px 0 0;
 }
 
-.countdownClass
-{
-    margin-top:0;
-    font-family: 'Boston', sans-serif;
-    font-size: 1.0em;
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    justify-content: center;
-}
- #countdown {
-    font-weight: unset;
-    background-color: #FFFFF0;
-}
-
-#countdownH1
-{
-    font-size: 1.3em;
-    margin-bottom: 0;
-}
-
-#countdownLocation
-{
-    font-weight: unset;
-    font-size: 1em;
-}
-
 .topnav {
     display: flex;
     background-color: #FFFFF0;
@@ -138,7 +84,6 @@ img {
     text-decoration: none; /* Remove underline */
     color: black;
     border-bottom: 2px solid #ddd; /* Subtle border for definition */
-    justify-content: space-evenly;
     box-sizing: border-box;
     align-items: center; /* Center items vertically */
     transition: color 0.3s, transform 0.3s; /* Smooth hover effect */
@@ -226,17 +171,6 @@ img {
     color: black;
 }
 
-.content {
-    font-family: 'Boston', sans-serif;
-    font-size: 20pt;
-    padding: 1.2em;
-    text-align: center;
-}
-
-.content h2
-{
-    font-size: 1.6em;
-}
 
 footer {
     background-color: #D8EEFF; 
@@ -251,3 +185,34 @@ footer a {
     margin: 0 5px;
 }
 
+.party 
+{
+    font-family: 'Boston', sans-serif;
+    font-size: 14pt;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    display: flex;
+    align-content:center;
+    width: 75%;
+    margin: 0 auto;
+    white-space: pre-line;
+}
+
+.column {
+    justify-content: center;
+    align-content: center;
+    flex: 50%;
+}
+
+.party img {
+  border-radius: 50%;
+  max-width: 30%;
+  max-height: 30%;
+  outline-style: solid;
+  outline-width: 2px;
+  box-shadow: 8px 8px 15px rgba(0,0,0,0.5);
+  overflow: hidden;
+  display:inline-block;
+  vertical-align:middle;
+}
