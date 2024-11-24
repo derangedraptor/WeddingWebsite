@@ -24,8 +24,8 @@ img {
     padding: 0;
     display: block;
     margin: 0 auto;
-    max-height: 100%;
-    max-width: 100%;
+    width: 200px; /* Set a fixed width */
+    height: 200px; /* Set a fixed height */
 }
 
 /* Overlay text styling */
@@ -207,12 +207,48 @@ footer a {
 
 .party img {
   border-radius: 50%;
-  max-width: 30%;
-  max-height: 30%;
+  width: 120px; /* Default size for smaller screens */
+  height: 160px;
+  object-fit: cover; /* Ensure the image fits within the oval */
   outline-style: solid;
   outline-width: 2px;
   box-shadow: 8px 8px 15px rgba(0,0,0,0.5);
   overflow: hidden;
   display:inline-block;
   vertical-align:middle;
+}
+/* Images styling */
+.column img {
+  width: 120px; /* Default size for smaller screens */
+  height: 160px;
+  object-fit: cover; /* Ensure the image fits within the oval */
+  border-radius: 50%; /* Make the image oval */
+  border: 2px solid #ccc; /* Optional: Add a border */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Add a shadow */
+}
+
+/* Mobile View */
+@media (max-width: 768px) {
+    .party {
+        flex-direction: column; /* Stack the columns vertically */
+        align-items: center; /* Center the columns */
+    }
+
+    .column {
+        width: 100%; /* Make each column take up full width */
+        gap: 20px; /* Space between elements in each column */
+    }
+
+    img {
+        width: 120px; /* Keep images smaller on mobile */
+        height: 160px;
+    }
+}
+
+/* Adjust image size for larger screens */
+@media (min-width: 768px) {
+    .column img {
+        width: 150px; /* Larger images on desktops */
+        height: 200px;
+    }
 }
