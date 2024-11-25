@@ -195,9 +195,18 @@ img {
     flex: 50%;
 }
 
+#location-details
+{
+    border-right:1px solid black;
+    margin-right: 10px;
+    padding: 7px;
+    padding-right: 25px;
+}
+
 #location-images
 {
-    margin-top: 28pt;
+    margin-left: 25pt;
+    margin-top: 25pt;
 }
 
 .column img {
@@ -208,30 +217,28 @@ img {
 
 .detail-box {
     font-family: 'Boston', sans-serif;
-    font-size: 18pt;
+    font-size: 17pt;
     align-items: start;
     justify-content: space-between;
     text-align: center;
     display: flex;
     align-content:center;
-    width: 90%;
+    width: 95%;
     flex: 1;
-    margin: 0 auto; /* Add some space around columns */
     box-sizing: border-box; /* Ensure padding doesn’t affect width */
     white-space: pre-line;
-    padding-bottom: 20px;
+    padding-bottom: 25px;
     gap: 50px; /* Space between columns */
+    margin-left: 7%;
+    margin-top: 5%;
 }
 
 .detail-box h1 {
     font-size: 1.8em;
-    color: #b97c67;
-    margin-bottom: 10px;
 }
 
 .detail-box p {
     font-size: 1.2em;
-    margin: 5px 0;
 }
 
 .timeanddate
@@ -248,8 +255,8 @@ img {
 .timeanddate h1
 {
     font-size: 1.8em;
-    color: #b97c67;
-    margin-bottom: 10px;
+    color: #505C45;
+    margin-bottom: 8px;
 }
 
 .timeanddate p
@@ -275,7 +282,7 @@ img {
 .dresscode h1
 {
     font-size: 1.8em;
-    color: #b97c67;
+    color: #505C45;
     margin-bottom: 10px;
 }
 
@@ -294,19 +301,45 @@ img {
 /* Mobile view: Stack columns vertically */
 @media (max-width: 1000px) {
     .detail-box {
+        overflow-x: hidden;
         width: 100%;
         flex-direction: column; /* Stack columns on top of each other */
-        gap: 10px; /* Add spacing between stacked items */
+        margin: 0 auto;
     }
 
-    .column {
+    .detail-box h1 {
+        font-size: 1.8em;
+        padding: 0;
+        margin: 0;
+    }
+
+    .column 
+    {
+        padding: 0;
+        margin: 0 auto;
         width: 100%; /* Full width for each column */
+    }
+
+    #location-details
+    {
+        border-right:0;
+    }  
+
+    #location-images
+    {
+        margin: 0 auto;  
+        width: 100%;
+    }
+
+    .space 
+    {
+        display: none;
     }
 }
 
 .map-link {
     display: inline-block;
-    background-color: #b97c67;
+    background-color: #505C45;;
     color: #fff;
     padding: 10px 20px;
     text-decoration: none;
@@ -315,7 +348,7 @@ img {
 }
 
 .map-link:hover {
-    background-color: #a0664f;
+    background-color: #384031;
 }
 
 footer {
