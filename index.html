@@ -25,7 +25,7 @@
         October 25th, 2025 </h1>
             <a href="index.html">Home</a>
             <a href="ourstory.html">Our Story</a>
-            <a href="index.html">Wedding Details</a>
+            <a href="WeddingDetails.html">Wedding Details</a>
             <a href="RSVP.html" style="display: none;">RSVP</a>
             <a href="#accommodations" style="display: none;">Accommodations</a>
             <a href="#registry" style="display: none;">Registry</a>
@@ -72,48 +72,42 @@
   <!-- Main Content Section -->
     <div class="content">
         <h2>Welcome!</h2>
-        <p>We are so excited to celebrate our special day with you! Please find all the details you need about our wedding here.
-    <!-- CountDown -->
-    
-    <h1 id="countdownH1">October 25th, 2025</h1>
-    <section id="countdownSection" class="countdownClass">
-        <h2 id="countdownLocation">Scottsdale, Arizona</h2>
-        <div id="countdown"></div>
-         <script>
-                // Set the date we're counting down to
-                var countDownDate = new Date("Oct 25, 2025 01:00").getTime();
+        <p>We are so excited to celebrate our special day with you! Please find all the details you need about our wedding here. </p>    
+        <h1 id="countdownH1">October 25th, 2025</h1>
+        <section id="countdownSection" class="countdownClass">
+            <h2 id="countdownLocation">Scottsdale, Arizona</h2>
+            <div id="countdown"></div>
+                <script>
+                    // Set the date we're counting down to
+                    var countDownDate = new Date("Oct 25, 2025 01:00").getTime();
 
-                // Update the countdown every 1 second
-                var x = setInterval(function() 
-                {
-
-                    // Get today's date and time
-                    var now = new Date().getTime();
-
-                    // Find the distance between now and the countdown date
-                    var distance = countDownDate - now;
-
-                    // Time calculations for days, hours, minutes, and seconds
-                    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-                    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-                    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-                    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-                    // Display the result in the element with id="countdown"
-                    document.getElementById("countdown").innerHTML = days + " Days " + hours + " Hours "
-                    + minutes + " Minutes " + seconds + " Seconds ";
-
-                    // If the countdown is finished, write some text
-                    if (distance < 0) 
+                    // Update the countdown every 1 second
+                    var x = setInterval(function() 
                     {
-                        clearInterval(x);
-                        document.getElementById("countdown").innerHTML = "EXPIRED";
-                    }
-                }, 1000);
-            </script>
-    </section>
+                        // Get today's date and time
+                        var now = new Date().getTime();
 
-</p>
+                        // Find the distance between now and the countdown date
+                        var distance = countDownDate - now;
+
+                        // Time calculations for days, hours, minutes, and seconds
+                        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                        var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+                        // Display the result in the element with id="countdown"
+                        document.getElementById("countdown").innerHTML = days + " Days " + hours + " Hours "
+                        + minutes + " Minutes " + seconds + " Seconds ";
+                        if (distance < 0) 
+                        {
+                            clearInterval(x);
+                            document.getElementById("countdown").innerHTML = "EXPIRED";
+                        }
+                    }, 1000);
+                </script>
+            </section>
+        </div>
     </div>
     <footer>
         <p>A website creation of James Brechtel</p>
