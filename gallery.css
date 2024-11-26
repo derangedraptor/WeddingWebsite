@@ -142,42 +142,12 @@ body {
     cursor: pointer;
 }
 
-.hamburger i 
-{
+.hamburger i {
     background-color: #FFFFF0;
     font-size: 24px;
     color: black;
 }
 
-.ourstorydetails
-{
-    font-size: 16pt;
-    font-family: 'Georgia', sans-serif;
-    justify-content: center;
-    text-align: center;
-    margin: 5%;
-}
-
-.row {
-    justify-content: center;
-    text-align: center;
-    display: flex;
-    flex-wrap: wrap;
-    margin-bottom: 5%;
-}
-
-/* Create four equal columns that sits next to each other */
-.column {
-  flex: 25%;
-  max-width: 20%;
-  padding: 0 4px;
-}
-
-.column img {
-  margin-top: 8px;
-  vertical-align: middle;
-  width: 100%;
-}
 
 footer {
     background-color: #D8EEFF; 
