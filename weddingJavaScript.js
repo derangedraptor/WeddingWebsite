@@ -68,3 +68,4 @@ function handleDeviceSpecificCode()
     toolbar.style.display = "flex";
   }
 }
+

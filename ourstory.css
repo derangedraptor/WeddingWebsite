@@ -206,6 +206,7 @@ body {
     transform: scale(1.05); /* Slight enlargement on hover */
 }
 
+
 /* Fullscreen Modal Styles */
 .fullscreen-modal {
     display: none; /* Hidden by default */
@@ -231,8 +232,8 @@ body {
 }
 
 footer {
-    background-color: #D8EEFF; 
-    color: black;
+    background-color: #384031; 
+    color: white;
     text-align: center;
     padding: 10px;
 }

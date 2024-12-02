@@ -48,16 +48,188 @@
             <a href="gallery.html">Gallery</a>
         </nav>
     </div>
-
-    <div class="ourstorydetails">
-        
+    <div class="buttons">
+        <button onclick="showDiv('photogrid')">Photo Grid</button>
+        <button onclick="showDiv('seattle')">Seattle</button>
+        <button onclick="showDiv('proposal')">Proposal</button>
     </div>
 
-</p>
+    <script>
+    function showDiv(divId) {
+      // Hide all containers
+      const containers = document.querySelectorAll('.container');
+      containers.forEach(container => container.classList.remove('active'));
+
+      // Show the selected container
+      const selectedDiv = document.getElementById(divId);
+      if (selectedDiv) {
+        selectedDiv.classList.add('active');
+      }
+    }
+    // Default view
+    showDiv('photogrid');
+    </script>
+
+    <div class="container active" id="photogrid">
+        <div class="row">
+                    <div class="column">
+                    <img src="gallery/1.jpeg">
+                    <img src="gallery/2.jpeg">
+                    <img src="gallery/3.jpeg">
+                    <img src="gallery/4.jpeg">
+                    <img src="gallery/5.jpeg">
+                    <img src="gallery/6.jpeg">
+                    <img src="gallery/7.jpeg">
+                    <img src="gallery/8.jpeg">
+                    <img src="gallery/9.jpeg">
+                    <img src="gallery/10.jpeg">
+                    <img src="gallery/11.jpeg">
+                    <img src="gallery/12.jpeg">
+                    <img src="gallery/48.jpeg">
+                </div>
+                <div class="column">
+                    <img src="gallery/13.jpeg">
+                    <img src="gallery/14.jpeg">
+                    <img src="gallery/15.jpeg">
+                    <img src="gallery/16.jpeg">
+                    <img src="gallery/17.jpeg">
+                    <img src="gallery/18.jpeg">
+                    <img src="gallery/19.jpeg">
+                    <img src="gallery/20.jpeg">
+                    <img src="gallery/21.jpeg">
+                    <img src="gallery/22.jpeg">
+                    <img src="gallery/23.jpeg">
+                    <img src="gallery/24.jpg">        
+                </div>
+                <div class="column">
+                     <img src="gallery/25.jpg">
+                    <img src="gallery/26.jpg">
+                    <img src="gallery/27.jpg">
+                    <img src="gallery/28.jpg">
+                    <img src="gallery/29.jpg">
+                    <img src="gallery/30.jpg">
+                    <img src="gallery/31.jpg">
+                    <img src="gallery/32.jpg">
+                    <img src="gallery/33.jpg">
+                    <img src="gallery/34.jpeg">
+                    <img src="gallery/35.jpeg">
+                    <img src="gallery/36.jpeg">
+                </div>
+                <div class="column">
+                     <img src="gallery/37.jpeg">
+                    <img src="gallery/38.jpeg">
+                    <img src="gallery/39.jpeg">
+                    <img src="gallery/40.jpeg">
+                    <img src="gallery/41.jpeg">
+                    <img src="gallery/42.jpeg">
+                    <img src="gallery/43.jpeg">
+                    <img src="gallery/44.jpeg">
+                    <img src="gallery/45.jpeg">
+                    <img src="gallery/46.jpeg">
+                    <img src="gallery/47.jpeg">
+                </div>
+            </div>
+            <script>
+                document.addEventListener("DOMContentLoaded", () => {
+                    const modal = document.createElement("div");
+                    modal.className = "fullscreen-modal";
+                    modal.innerHTML = `<img src="" alt="Fullscreen Image"><button style="position:absolute; top:10px; right:10px; color:white; font-size:24px; border:none; background:transparent; cursor:pointer;">&times;</button>`;
+                    document.body.appendChild(modal);
+
+                    const modalImg = modal.querySelector("img");
+                    const closeModal = modal.querySelector("button");
+
+                    document.querySelectorAll(".column img").forEach((img) => {
+                        img.addEventListener("click", () => {
+                        modalImg.src = img.src; // Use the clicked image's source
+                        modal.style.display = "flex"; // Show the modal
+                    });
+                });
+
+                closeModal.addEventListener("click", () => {
+                    modal.style.display = "none"; // Hide the modal
+                });
+
+                modal.addEventListener("click", (e) => {
+                    if (e.target === modal) {
+                        modal.style.display = "none"; // Hide modal when clicking outside the image
+                    }
+                });
+            });
+        </script>
+        </div>
+    </div>
+    <div class="container" id="seattle">
+        <div class="row">
+            <div class="column">
+                <img src="gallery/1.jpeg">
+                <img src="gallery/2.jpeg">
+                <img src="gallery/3.jpeg">
+                <img src="gallery/4.jpeg">
+                <img src="gallery/5.jpeg">
+                <img src="gallery/6.jpeg">
+                <img src="gallery/8.jpeg">
+                <img src="gallery/9.jpeg">
+                <img src="gallery/10.jpeg">
+                <img src="gallery/11.jpeg">
+                <img src="gallery/48.jpeg">
+            </div>
+            <div class="column">
+                <img src="gallery/13.jpeg">
+                <img src="gallery/15.jpeg">
+                <img src="gallery/16.jpeg">
+                <img src="gallery/17.jpeg">
+                <img src="gallery/18.jpeg">
+                <img src="gallery/19.jpeg">
+                <img src="gallery/21.jpeg">
+                <img src="gallery/22.jpeg">      
+                <img src="gallery/25.jpg">
+                <img src="gallery/26.jpg">
+            </div>   
+            <div class="column">         
+                <img src="gallery/46.jpeg">
+                <img src="gallery/47.jpeg">
+                <img src="gallery/28.jpg">
+                <img src="gallery/29.jpg">
+                <img src="gallery/30.jpg">
+                <img src="gallery/31.jpg">
+                <img src="gallery/32.jpg">
+                <img src="gallery/33.jpg">
+                <img src="gallery/34.jpeg">
+                <img src="gallery/35.jpeg">
+                <img src="gallery/27.jpg">
+            </div>
+            <div class="column">
+                <img src="gallery/37.jpeg">
+                <img src="gallery/38.jpeg">
+                <img src="gallery/39.jpeg">
+                <img src="gallery/40.jpeg">
+                <img src="gallery/41.jpeg">
+                <img src="gallery/42.jpeg">
+                <img src="gallery/43.jpeg">
+                <img src="gallery/44.jpeg">
+                <img src="gallery/45.jpeg">
+                <img src="gallery/12.jpeg">
+            </div>
+        </div>
+    </div>
+
+    <div div class="container" id="proposal">
+        <div class="row">
+            <div class="column">
+                <img src="gallery/7.jpeg">
+                <img src="gallery/14.jpeg">
+                <img src="gallery/20.jpeg">
+            </div>
+            <div class="column">
+                <img src="gallery/23.jpeg">
+                <img src="gallery/24.jpg">
+                <img src="gallery/36.jpeg">
+            </div>
+        </div>
     </div>
     <footer>
         <p>A website creation of James Brechtel</p>
-        <p>Follow us on social media: <a href="#">Instagram</a>, <a href="#">Facebook</a></p>
     </footer>
 </body>
 </html>
