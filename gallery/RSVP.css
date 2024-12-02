@@ -1,0 +1,173 @@
+@font-face {
+    font-family: 'PinyonScript'; /* Name of your custom font */
+    src: url('fonts/PinyonScript-Regular.ttf') format('truetype'),
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Boston'; /* Name of your custom font */
+    src: url('fonts/Boston.ttf') format('truetype'),
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: 'Ariel', sans-serif; /* Apply custom font */
+    margin: 0;
+    padding: 0;
+    background-color: #FFFFF0;
+}
+
+.topnav a:link { 
+  text-decoration: none;
+} 
+.topnav a:visited { 
+  text-decoration: none;
+} 
+.topnav a:hover { 
+  text-decoration: none; }
+} 
+.topnav a:active { 
+  text-decoration: none; 
+}
+
+#weddingToolbar a
+{
+    padding-left: 15pt;
+    padding-right: 15pt;
+    padding-top: 25pt;
+    color: black;
+}
+
+#weddingToolbar {
+    font-family: 'PinyonScript', sans-serif;
+    font-size: 2.2em;
+    text-decoration: none; /* Remove underline */
+    color: black;
+    border-bottom: 2px solid #ddd; /* Subtle border for definition */
+    justify-content: space-evenly;
+    box-sizing: border-box;
+    align-items: center; /* Center items vertically */
+    transition: color 0.3s, transform 0.3s; /* Smooth hover effect */
+}
+
+/* Hover effect for links */
+#weddingToolbar a:hover {
+  color: #a83232; /* Wedding-themed accent color */
+  transform: scale(1.1); /* Slight enlargement on hover */
+}
+
+.topnav {
+    display: flex;
+    background-color: #FFFFF0;
+    height: 100%; /* Height for the topnav bar */
+    justify-content: center;
+    overflow: visible;
+    padding: 15px 15px; /* Spacing around toolbar */
+}
+
+
+.links {
+    position: fixed;
+    top: 0;
+    right: -100%; /* Initially hidden off-screen on the right */
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    background-color: rgba(0, 0, 0, 0.9); /* Dark overlay */
+    z-index: 1; /* Appear on top */
+    transition: right 0.3s ease-in-out; /* Smooth slide from right */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.links a {
+    padding: 15px;
+    text-decoration: none;
+    font-size: 25px;
+    color: white;
+    text-align: center;
+    display: block;
+    transition: 0.3s;
+}
+
+.links h1{
+    justify-content: top;
+    margin-bottom: 10%;
+    white-space: pre-line;
+    text-decoration: none;
+    font-size: 25px;
+    color: white;
+    text-align: center;
+    display: block;
+    transition: 0.3s;
+    border-bottom: 2px solid white;
+}
+
+.links a:hover {
+    background-color: #575757;
+}
+
+.hamburger {
+    background-color: #FFFFF0;
+    padding: 4pt;
+    padding-left: 5pt;
+    position: fixed; /* Keep the icon fixed at the top right */
+    right: 0;
+    top: 0;
+    z-index: 2; /* Make sure the icon stays above the overlay */
+    cursor: pointer;
+}
+
+.hamburger i {
+    background-color: #FFFFF0;
+    font-size: 24px;
+    color: black;
+}
+
+.namePlate {
+    padding-top: 20pt;
+    background-color: #FFFFF0;
+    font-family: 'PinyonScript', sans-serif;
+    font-size: 2em;
+    height: 55px;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    text-align: center;
+}
+
+.namePlate h1 {
+    font-size: 1.2em;
+    white-space: pre-line;
+    margin: 5px 0 0;
+}
+
+.formNav {
+    background-color: #FFFFF0;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 10%;
+    padding: 10px;
+}
+
+#RSVPH1{
+    font-family: 'KugileDemo', sans-serif; /* Apply custom font */
+    text-align: center;
+}
+
+
+footer {
+    background-color: #384031; 
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+footer a {
+    color: #E0E3F4; /* Lilac */
+    text-decoration: none;
+    margin: 0 5px;
+}

@@ -1,0 +1,354 @@
+@font-face {
+    font-family: 'PinyonScript'; /* Name of your custom font */
+    src: url('fonts/PinyonScript-Regular.ttf') format('truetype'),
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Boston'; /* Name of your custom font */
+    src: url('fonts/Boston.ttf') format('truetype'),
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: 'Ariel', sans-serif; /* Apply custom font */
+    margin: 0;
+    padding: 0;
+    align-items: center;
+    background-color: #FFFFF0;
+}
+
+img {
+    padding: 0;
+    display: block;
+    margin: 0 auto;
+    max-height: 95%;
+    max-width: 95%;
+}
+
+.topnav {
+    display: flex;
+    background-color: #FFFFF0;
+    height: 100%; /* Height for the topnav bar */
+    justify-content: center;
+    overflow: visible;
+    padding: 15px 15px; /* Spacing around toolbar */
+}
+
+
+.links {
+    position: fixed;
+    top: 0;
+    right: -100%; /* Initially hidden off-screen on the right */
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    background-color: rgba(0, 0, 0, 0.9); /* Dark overlay */
+    z-index: 1; /* Appear on top */
+    transition: right 0.3s ease-in-out; /* Smooth slide from right */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.links a {
+    padding: 15px;
+    text-decoration: none;
+    font-size: 25px;
+    color: white;
+    text-align: center;
+    display: block;
+    transition: 0.3s;
+}
+
+.links h1{
+    font-family: 'PinyonScript', sans-serif;
+    justify-content: top;
+    margin-bottom: 10%;
+    white-space: pre-line;
+    text-decoration: none;
+    font-size: 36px;
+    color: white;
+    text-align: center;
+    display: block;
+    transition: 0.3s;
+    border-bottom: 2px solid white;
+}
+
+.links a:hover {
+    color: #a83232; /* Wedding-themed accent color */
+    transform: scale(1.1); /* Slight enlargement on hover */
+    background-color: #575757;
+}
+
+.hamburger {
+    background-color: #FFFFF0;
+    padding: 4pt;
+    padding-left: 5pt;
+    position: fixed; /* Keep the icon fixed at the top right */
+    right: 0;
+    top: 0;
+    z-index: 2; /* Make sure the icon stays above the overlay */
+    cursor: pointer;
+}
+
+.hamburger i {
+    background-color: #FFFFF0;
+    font-size: 24px;
+    color: black;
+}
+
+.namePlate {
+    padding-top: 20pt;
+    background-color: #FFFFF0;
+    /** background-color: #D8EEFF; **/
+    font-family: 'PinyonScript', sans-serif;
+    font-size: 24pt;
+    height: 55px;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    text-align: center;
+}
+
+.namePlate h1 {
+    font-size: 1.5em;
+    white-space: pre-line;
+    margin: 5px 0 0;
+}
+
+.topnav {
+    display: flex;
+    background-color: #FFFFF0;
+    height: 100%; /* Height for the topnav bar */
+    justify-content: center;
+    overflow: visible;
+    padding: 15px 15px; /* Spacing around toolbar */
+}
+
+#weddingToolbar a
+{
+    padding: 10pt;
+    color: black;
+}
+
+#weddingToolbar {
+    font-family: 'Boston', sans-serif;
+    font-size: 21pt;
+    text-decoration: none; /* Remove underline */
+    color: black;
+    border-bottom: 2px solid #ddd; /* Subtle border for definition */
+    justify-content: space-evenly;
+    box-sizing: border-box;
+    align-items: center; /* Center items vertically */
+    transition: color 0.3s, transform 0.3s; /* Smooth hover effect */
+}
+
+/* Hover effect for links */
+#weddingToolbar a:hover {
+  color: #a83232; /* Wedding-themed accent color */
+  transform: scale(1.1); /* Slight enlargement on hover */
+}
+
+.topnav a:link { 
+  text-decoration: none;
+} 
+.topnav a:visited { 
+  text-decoration: none;
+} 
+.topnav a:hover { 
+  text-decoration: none; }
+} 
+.topnav a:active { 
+  text-decoration: none; 
+}
+
+.hamburger {
+    background-color: #FFFFF0;
+    padding: 4pt;
+    padding-left: 5pt;
+    position: fixed; /* Keep the icon fixed at the top right */
+    right: 0;
+    top: 0;
+    z-index: 2; /* Make sure the icon stays above the overlay */
+    cursor: pointer;
+}
+
+.hamburger i {
+    background-color: #FFFFF0;
+    font-size: 24px;
+    color: black;
+}
+
+.column {
+    justify-content: center;
+    align-content: center;
+    flex: 50%;
+}
+
+#location-details
+{
+    border-right:1px solid black;
+    margin-right: 10px;
+    padding: 7px;
+    padding-right: 25px;
+}
+
+#location-images
+{
+    margin-right: 4%;
+    margin-left: 2%;
+    margin-top: 30pt;
+}
+
+.column img {
+    max-height: 70%;
+    max-width: 70%;
+    display: inline-block;
+    vertical-align:middle;
+}
+
+.detail-box {
+    font-family: 'Boston', sans-serif;
+    font-size: 16pt;
+    align-items: start;
+    text-align: center;
+    display: flex;
+    align-content:center;
+    white-space: pre-line;
+    gap: 50px; /* Space between columns */
+    margin-left: 6%;
+    margin-top: 3%;
+}
+
+.detail-box h1 {
+    font-size: 1.8em;
+}
+
+.detail-box p {
+    font-size: 1.2em;
+}
+
+.timeanddate
+{
+    font-family: 'Boston', sans-serif;
+    font-size: 18pt;
+    text-align: center;
+    align-content:center;
+    width: 75%;
+    flex: 1;
+    margin: 0 auto; /* Add some space around columns */
+}
+
+.timeanddate h1
+{
+    font-size: 1.8em;
+    color: #505C45;
+    margin-bottom: 8px;
+}
+
+.timeanddate p
+{
+    font-size: 1.2em;
+    margin: 5px 0;
+}
+
+.dresscode
+{
+    font-family: 'Boston', sans-serif;
+    font-size: 18pt;
+    text-align: center;
+    align-content:center;
+    width: 75%;
+    flex: 1;
+    margin: 0 auto; /* Add some space around columns */
+    margin-top: 3%;
+    margin-bottom: 10%;
+}
+
+
+.dresscode h1
+{
+    font-size: 1.8em;
+    color: #505C45;
+    margin-bottom: 10px;
+}
+
+.dresscode p
+{
+    font-size: 1.2em;
+    margin: 5px 0;
+}
+
+/* Church image styling */
+.detail-box img {
+    margin-top: 1%;
+    display: block;
+}
+
+/* Mobile view: Stack columns vertically */
+@media (max-width: 1000px) {
+    .detail-box {
+        overflow-x: hidden;
+        width: 100%;
+        flex-direction: column; /* Stack columns on top of each other */
+        margin: 0 auto;
+    }
+
+    .detail-box h1 {
+        font-size: 1.8em;
+        padding: 0;
+        margin: 0;
+    }
+
+    .column 
+    {
+        padding: 0;
+        margin: 0 auto;
+        width: 100%; /* Full width for each column */
+    }
+
+    #location-details
+    {
+        border-right:0;
+    }  
+
+    #location-images
+    {
+        margin: 0 auto;  
+        width: 100%;
+    }
+
+    .space 
+    {
+        display: none;
+    }
+}
+
+.map-link {
+    display: inline-block;
+    background-color: #505C45;;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.map-link:hover {
+    background-color: #384031;
+}
+
+footer {
+    background-color: #384031; 
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+footer a {
+    color: #E0E3F4; /* Lilac */
+    text-decoration: none;
+    margin: 0 5px;
+}

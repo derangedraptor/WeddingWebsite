@@ -1,0 +1,253 @@
+@font-face {
+    font-family: 'PinyonScript'; /* Name of your custom font */
+    src: url('fonts/PinyonScript-Regular.ttf') format('truetype'),
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Boston'; /* Name of your custom font */
+    src: url('fonts/Boston.ttf') format('truetype'),
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: 'Ariel', sans-serif; /* Apply custom font */
+    margin: 0;
+    padding: 0;
+    align-items: center;
+    background-color: #FFFFF0;
+}
+
+img {
+    padding: 0;
+    display: block;
+    margin: 0 auto;
+    max-height: 100%;
+    max-width: 100%;
+}
+
+.carousel-container {
+  height: 50vh; /* Relative height for responsiveness */
+  max-height: 500px;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  position: relative;
+
+}
+
+.carousel {
+  display: flex;
+  height: 100%;
+  white-space: nowrap; /* Prevent line breaks */
+  position: absolute; /* Ensure it’s positioned for smooth scrolling */
+  will-change: transform; /* Optimize performance */
+
+}
+
+.carousel img {
+  height: 100%; /* Fit the image to container height */
+  object-fit: cover; /* Maintain aspect ratio and cover the area */
+  flex-shrink: 0; /* Prevent shrinking */
+}
+
+
+
+/* Overlay text styling */
+.overlay-text {
+    font-family: 'PinyonScript', sans-serif;
+    position: absolute;
+    top: 50%; /* Center the text vertically */
+    left: 50%; /* Center the text horizontally */
+    transform: translate(-50%, -50%); /* Adjust to exactly center the text */
+    font-size: 5.2em;
+    font-weight: bold;
+    color: white;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Optional: shadow for readability */
+    text-align: center;
+    padding: 0 20px; /* Optional: space around the text */
+    z-index: 10; /* Ensure text stays above the images */
+}
+
+.namePlate {
+    padding-top: 20pt;
+    background-color: #FFFFF0;
+    /** background-color: #D8EEFF; **/
+    font-family: 'PinyonScript', sans-serif;
+    font-size: 24pt;
+    height: 55px;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    text-align: center;
+}
+
+.namePlate h1 {
+    font-size: 1.5em;
+    white-space: pre-line;
+    margin: 5px 0 0;
+}
+
+.countdownClass
+{
+    margin-top:0;
+    font-family: 'Boston', sans-serif;
+    font-size: 1.0em;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+}
+ #countdown {
+    font-weight: unset;
+    background-color: #FFFFF0;
+}
+
+#countdownH1
+{
+    font-size: 1.3em;
+    margin-bottom: 0;
+}
+
+#countdownLocation
+{
+    font-weight: unset;
+    font-size: 1em;
+}
+
+.topnav {
+    display: flex;
+    background-color: #FFFFF0;
+    height: 100%; /* Height for the topnav bar */
+    justify-content: center;
+    overflow: visible;
+    padding: 15px 15px; /* Spacing around toolbar */
+}
+
+#weddingToolbar a
+{
+    padding: 10pt;
+    color: black;
+}
+
+#weddingToolbar {
+    font-family: 'Boston', sans-serif;
+    font-size: 21pt;
+    text-decoration: none; /* Remove underline */
+    color: black;
+    border-bottom: 2px solid #ddd; /* Subtle border for definition */
+    justify-content: space-evenly;
+    box-sizing: border-box;
+    align-items: center; /* Center items vertically */
+    transition: color 0.3s, transform 0.3s; /* Smooth hover effect */
+}
+
+/* Hover effect for links */
+#weddingToolbar a:hover {
+  color: #a83232; /* Wedding-themed accent color */
+  transform: scale(1.1); /* Slight enlargement on hover */
+}
+
+.topnav a:link { 
+  text-decoration: none;
+} 
+.topnav a:visited { 
+  text-decoration: none;
+} 
+.topnav a:hover { 
+  text-decoration: none; }
+} 
+.topnav a:active { 
+  text-decoration: none; 
+}
+
+
+.links {
+    position: fixed;
+    top: 0;
+    right: -100%; /* Initially hidden off-screen on the right */
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    background-color: rgba(0, 0, 0, 0.9); /* Dark overlay */
+    z-index: 1; /* Appear on top */
+    transition: right 0.3s ease-in-out; /* Smooth slide from right */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.links a {
+    padding: 15px;
+    text-decoration: none;
+    font-size: 25px;
+    color: white;
+    text-align: center;
+    display: block;
+    transition: 0.3s;
+}
+
+.links h1{
+    font-family: 'PinyonScript', sans-serif;
+    justify-content: top;
+    margin-bottom: 10%;
+    white-space: pre-line;
+    text-decoration: none;
+    font-size: 36px;
+    color: white;
+    text-align: center;
+    display: block;
+    transition: 0.3s;
+    border-bottom: 2px solid white;
+}
+
+.links a:hover {
+    color: #a83232; /* Wedding-themed accent color */
+    transform: scale(1.1); /* Slight enlargement on hover */
+    background-color: #575757;
+}
+
+.hamburger {
+    background-color: #FFFFF0;
+    padding: 4pt;
+    padding-left: 5pt;
+    position: fixed; /* Keep the icon fixed at the top right */
+    right: 0;
+    top: 0;
+    z-index: 2; /* Make sure the icon stays above the overlay */
+    cursor: pointer;
+}
+
+.hamburger i {
+    background-color: #FFFFF0;
+    font-size: 24px;
+    color: black;
+}
+
+.content {
+    font-family: 'Boston', sans-serif;
+    font-size: 20pt;
+    padding: 1.2em;
+    text-align: center;
+}
+
+.content h2
+{
+    font-size: 1.6em;
+}
+
+footer {
+    background-color: #384031; 
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+footer a {
+    color: #E0E3F4; /* Lilac */
+    text-decoration: none;
+    margin: 0 5px;
+}
+

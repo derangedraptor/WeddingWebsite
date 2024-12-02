@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<!-- Load an icon library to show a hamburger menu (bars) on small screens -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Wedding</title>
+    <link rel="stylesheet" href="WeddingParty.css">
+    <script type = "text/javascript" src="weddingJavaScript.js"></script>
+</head>
+<body onload="handleDeviceSpecificCode()">
+    
+    <!-- NamePlateSection -->
+    <div class = "namePlate" id="nameplate">
+        <h1>Wedding Party</h1>
+    </div>
+
+    <!-- Top Navigation Menu -->
+    <div class="topnav">
+        <!-- Navigation links (hidden by default) -->
+        <div class="links" id="myLinks">
+            <h1> Cammy & James 
+        October 25th, 2025 </h1>
+            <a href="index.html">Home</a>
+            <a href="ourstory.html">Our Story</a>
+            <a href="WeddingDetails.html">Wedding Details</a>
+            <a href="RSVP.html" style="display: none;">RSVP</a>
+            <a href="#accommodations" style="display: none;">Accommodations</a>
+            <a href="#registry" style="display: none;">Registry</a>
+            <a href="WeddingParty.html"> Wedding Party </a>
+            <a href="gallery.html">Gallery</a>
+        </div>
+        <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
+        <a href="javascript:void(0);" class="hamburger" id="hamburger" onclick="hamburgerDrop()" style="display: none;">
+            <i class="fa fa-bars"></i>
+        </a>
+        <!-- "Toolbar menu" / "Toolbar for nav links"-->
+        <nav id="weddingToolbar" style="display: none;">
+            <a href="index.html">Home</a>
+            <a href="ourstory.html">Our Story</a>
+            <a href="WeddingDetails.html">Wedding Details</a>
+            <a href="RSVP.html" style="display: none;">RSVP</a>
+            <a href="#accommodations" style="display: none;">Accommodations</a>
+            <a href="#registry" style="display: none;">Registry</a>
+            <a href="WeddingParty.html"> Wedding Party </a>
+            <a href="gallery.html">Gallery</a>
+        </nav>
+    </div>
+    <div class="party">
+        <div id="BridesMaids" class="column">
+            <img src="photos/amy.jpeg" alt="Amy" class="Amy">
+            <h2>Amy
+            Maid of Honor</h2>
+            <img src="photos/peach.JPG" alt="Nora" class="Nora">
+            <h2>Nora
+            Matron of Honor</h2>
+            <img src="photos/dianne.JPEG" alt="Dianne" class="Dianne">
+            <h2>Dianne
+            Bridesmaid</h2>
+            <img src="photos/amanda.png" alt="Amanda" class="Amanda">
+            <h2>Amanda
+            Bridesmaid</h2>
+            <img src="photos/carson.JPEG" alt="Carson" class="Carson">
+            <h2>Carson
+            Bridesmaid</h2>
+            <img src="photos/jude.jpg" alt="Judy" class="Judy">
+            <h2>Jude
+            Bridesmaid</h2>
+        </div>
+        <div class="column" class="Groomers">
+            <img src="photos/mistamandel.jpeg" alt="Christian" class="Christian">
+            <h2>Christian
+            Best Man</h2>
+            <img src="photos/jonathan.jpg" alt="Jonathan" class="Jonathan">
+            <h2>Jonathan
+            Groomsman</h2>
+            <img src="photos/Wei.jpeg" alt="Wei" class="Wei">
+            <h2>Wei
+            Groomsman</h2>
+            <img src="photos/josh.png" alt="Josh" class="Josh">
+            <h2>Josh
+            Groomsman</h2>
+            <img src="photos/brenden.jpg" alt="Brenden" class="Brenden">
+            <h2>Brenden
+            Groomsman</h2>
+            <img src="photos/jackson.jpg" alt="Jackson" class="Jackson">
+            <h2>Jackson
+            Groomsman</h2>
+        </div>
+    </div>
+        <footer>
+        <p>A website creation of James Brechtel</p>
+    </footer>
+</body>
+</html>

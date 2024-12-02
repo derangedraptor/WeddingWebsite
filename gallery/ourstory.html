@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<!-- Load an icon library to show a hamburger menu (bars) on small screens -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Wedding</title>
+    <link rel="stylesheet" href="ourstory.css">
+    <script type = "text/javascript" src="weddingJavaScript.js"></script>
+</head>
+<body onload="handleDeviceSpecificCode()">
+    
+    <!-- NamePlateSection -->
+    <div class = "namePlate" id="nameplate">
+        <h1>Our Story</h1>
+    </div>
+
+    <!-- Top Navigation Menu -->
+    <div class="topnav">
+        <!-- Navigation links (hidden by default) -->
+        <div class="links" id="myLinks">
+            <h1> Cammy & James 
+        October 25th, 2025 </h1>
+            <a href="index.html">Home</a>
+            <a href="ourstory.html">Our Story</a>
+            <a href="WeddingDetails.html">Wedding Details</a>
+            <a href="RSVP.html" style="display: none;">RSVP</a>
+            <a href="#accommodations" style="display: none;">Accommodations</a>
+            <a href="#registry" style="display: none;">Registry</a>
+            <a href="WeddingParty.html"> Wedding Party </a>
+            <a href="gallery.html">Gallery</a>
+        </div>
+        <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
+        <a href="javascript:void(0);" class="hamburger" id="hamburger" onclick="hamburgerDrop()" style="display: none;">
+            <i class="fa fa-bars"></i>
+        </a>
+        <!-- "Toolbar menu" / "Toolbar for nav links"-->
+        <nav id="weddingToolbar" style="display: none;">
+            <a href="index.html">Home</a>
+            <a href="ourstory.html">Our Story</a>
+            <a href="WeddingDetails.html">Wedding Details</a>
+            <a href="RSVP.html" style="display: none;">RSVP</a>
+            <a href="#accommodations" style="display: none;">Accommodations</a>
+            <a href="#registry" style="display: none;">Registry</a>
+            <a href="WeddingParty.html"> Wedding Party </a>
+            <a href="gallery.html">Gallery</a>
+        </nav>
+    </div>
+
+    <div class="ourstorydetails">
+        <div class="storydetails">
+            <p> Cammy and James still remember the first time they met very well. It was September of 2016 and it was one of the first Fridays of their first semester of undergrad. They were both taking a history course that Cammy thought would be an easy A and James thought would be interesting. The class itself was a general education course that had at least seventy or so students. The two of them had been placed into the same discussion section of less than 15 students. Cammy had already been seated when James walked in the room and the two of them immediately made eye contact. Cammy, who had been working retail over the summer, reflexively smiled due to her customer service training. James took this as an invite and went and sat down in the open seat next to her. From the first look Cammy thought James looked cute, but his leather computer side bag was geeky and so she wasn't really sure what to make of him. James thought she looked cute and friendly because she smiled at him. James, being true to his forgetful nature, had forgotten his pencil and so he leaned over and asked Cammy if she had an extra. Cammy of course was incredibly well prepared and had a spare. That was the start of the relationship, but now, after nearly nine years of dating, the two prepare for marriage and the true beginning of their adventures together.  </p>
+        </div>
+    </div>
+    <div class="photogrid">
+        <div class="row">
+                <div class="column">
+                    <img src="photos/goodearly.JPG">
+                    <img src="photos/cute.JPG">
+                    <img src="photos/gum.jpeg">
+                    <img src="photos/pool.PNG">
+                    <img src="photos/log.jpeg">
+                    <img src="photos/wheelpeace.jpeg">
+                </div>
+                <div class="column">
+                    <img src="photos/wheel.jpeg">
+                    <img src="photos/matching.jpeg">
+                    <img src="photos/snowcat.jpeg">
+                    <img src="photos/cammygraduation.jpeg">
+                    <img src="photos/couple.jpeg">
+                    <img src="photos/dorm.jpg">          
+                </div>
+                <div class="column">
+                    <img src="photos/kissdog.jpeg">
+                    <img src="photos/cats.jpeg">
+                    <img src="photos/paddle.jpeg">
+                    <img src="photos/eeveepuppy.jpeg">
+                    <img src="photos/mormonwedding.PNG">
+                    <img src="photos/puppymountain.jpeg">
+                </div>
+                <div class="column">
+                    <img src="photos/onwheel.jpeg">
+                    <img src="photos/cabin.jpeg">
+                    <img src="photos/alcatrazboat.jpeg">
+                    <img src="photos/butterfly.jpeg">
+                    <img src="photos/beer.jpeg">
+                    <img src="photos/cold.jpeg">
+                    <img src="photos/youth.jpg" alt="beach" class="youthphotos">
+                </div>
+            </div>
+            <script>
+                document.addEventListener("DOMContentLoaded", () => {
+                    const modal = document.createElement("div");
+                    modal.className = "fullscreen-modal";
+                    modal.innerHTML = `<img src="" alt="Fullscreen Image"><button style="position:absolute; top:10px; right:10px; color:white; font-size:24px; border:none; background:transparent; cursor:pointer;">&times;</button>`;
+                    document.body.appendChild(modal);
+
+                    const modalImg = modal.querySelector("img");
+                    const closeModal = modal.querySelector("button");
+
+                    document.querySelectorAll(".column img").forEach((img) => {
+                        img.addEventListener("click", () => {
+                        modalImg.src = img.src; // Use the clicked image's source
+                        modal.style.display = "flex"; // Show the modal
+                    });
+                });
+
+                closeModal.addEventListener("click", () => {
+                    modal.style.display = "none"; // Hide the modal
+                });
+
+                modal.addEventListener("click", (e) => {
+                    if (e.target === modal) {
+                        modal.style.display = "none"; // Hide modal when clicking outside the image
+                    }
+                });
+            });
+        </script>
+    </div>
+    <footer>
+        <p>A website creation of James Brechtel</p>
+    </footer>
+</body>
+</html>
