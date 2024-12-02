@@ -51,7 +51,7 @@
 
     <div class="ourstorydetails">
         <div class="storydetails">
-            <p> Cammy and James still remember the first time they met very well. It was September of 2016 and it was one of the first Fridays of their first semester of undergrad. They were both taking a Chinese history course that Cammy thought would be an easy A and James thought would be more interesting than the other options available. The class itself was a general education course that had at least seventy or so students. The two of them, not by chance, had been placed into the same discussion section of less than 15 students. Cammy had already been seated when James walked in the room and the two of them immediately made eye contact. Cammy, who had worked at a frozen yogurt shop over the summer, reflexively smiled due to her customer service training. James took this as an invite and went and sat down in the open seat next to her. From the first look Cammy thought James looked cute, but his leather computer side bag was geeky and so she wasn't really sure what to make of him. James thought she looked cute and friendly because she smiled at him. James, being true to his forgetful nature, had forgotten his pencil and so he leaned over and asked Cammy if she had an extra. Cammy of course was incredibly well prepared and had a spare. That was the start of the relationship, but now, after nearly nine years of dating, the two prepare for marriage and the true beginning of their adventures together.  </p>
+            <p> Cammy and James still remember the first time they met very well. It was September of 2016 and it was one of the first Fridays of their first semester of undergrad. They were both taking a history course that Cammy thought would be an easy A and James thought would be interesting. The class itself was a general education course that had at least seventy or so students. The two of them had been placed into the same discussion section of less than 15 students. Cammy had already been seated when James walked in the room and the two of them immediately made eye contact. Cammy, who had been working retail over the summer, reflexively smiled due to her customer service training. James took this as an invite and went and sat down in the open seat next to her. From the first look Cammy thought James looked cute, but his leather computer side bag was geeky and so she wasn't really sure what to make of him. James thought she looked cute and friendly because she smiled at him. James, being true to his forgetful nature, had forgotten his pencil and so he leaned over and asked Cammy if she had an extra. Cammy of course was incredibly well prepared and had a spare. That was the start of the relationship, but now, after nearly nine years of dating, the two prepare for marriage and the true beginning of their adventures together.  </p>
         </div>
     </div>
     <div class="photogrid">
@@ -90,6 +90,34 @@
                     <img src="photos/youth.jpg" alt="beach" class="youthphotos">
                 </div>
             </div>
+            <script>
+                document.addEventListener("DOMContentLoaded", () => {
+                    const modal = document.createElement("div");
+                    modal.className = "fullscreen-modal";
+                    modal.innerHTML = `<img src="" alt="Fullscreen Image"><button style="position:absolute; top:10px; right:10px; color:white; font-size:24px; border:none; background:transparent; cursor:pointer;">&times;</button>`;
+                    document.body.appendChild(modal);
+
+                    const modalImg = modal.querySelector("img");
+                    const closeModal = modal.querySelector("button");
+
+                    document.querySelectorAll(".column img").forEach((img) => {
+                        img.addEventListener("click", () => {
+                        modalImg.src = img.src; // Use the clicked image's source
+                        modal.style.display = "flex"; // Show the modal
+                    });
+                });
+
+                closeModal.addEventListener("click", () => {
+                    modal.style.display = "none"; // Hide the modal
+                });
+
+                modal.addEventListener("click", (e) => {
+                    if (e.target === modal) {
+                        modal.style.display = "none"; // Hide modal when clicking outside the image
+                    }
+                });
+            });
+        </script>
     </div>
     <footer>
         <p>A website creation of James Brechtel</p>
