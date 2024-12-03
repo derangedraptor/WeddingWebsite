@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<!-- Load an icon library to show a hamburger menu (bars) on small screens -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Wedding</title>
+    <link rel="stylesheet" href="faq.css">
+    <script type = "text/javascript" src="weddingJavaScript.js"></script>
+</head>
+<body onload="handleDeviceSpecificCode()">
+    
+    <!-- NamePlateSection -->
+    <div class = "namePlate" id="nameplate">
+        <h1>Frequently Asked Questions</h1>
+    </div>
+
+    <!-- Top Navigation Menu -->
+    <div class="topnav">
+        <!-- Navigation links (hidden by default) -->
+        <div class="links" id="myLinks">
+            <h1> Cammy & James 
+        October 25th, 2025 </h1>
+            <a href="index.html">Home</a>
+            <a href="ourstory.html">Our Story</a>
+            <a href="WeddingDetails.html">Wedding Details</a>
+            <a href="RSVP.html" style="display: none;">RSVP</a>
+            <a href="#accommodations" style="display: none;">Accommodations</a>
+            <a href="#registry" style="display: none;">Registry</a>
+            <a href="WeddingParty.html"> Wedding Party </a>
+            <a href="gallery.html">Gallery</a>
+            <a href="faq.html">FAQ</a>
+        </div>
+        <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
+        <a href="javascript:void(0);" class="hamburger" id="hamburger" onclick="hamburgerDrop()" style="display: none;">
+            <i class="fa fa-bars"></i>
+        </a>
+        <!-- "Toolbar menu" / "Toolbar for nav links"-->
+        <nav id="weddingToolbar" style="display: none;">
+            <a href="index.html">Home</a>
+            <a href="ourstory.html">Our Story</a>
+            <a href="WeddingDetails.html">Wedding Details</a>
+            <a href="RSVP.html" style="display: none;">RSVP</a>
+            <a href="#accommodations" style="display: none;">Accommodations</a>
+            <a href="#registry" style="display: none;">Registry</a>
+            <a href="WeddingParty.html"> Wedding Party </a>
+            <a href="gallery.html">Gallery</a>
+            <a href="faq.html">FAQ</a>
+        </nav>
+    </div>
+    <div class="faq-container">
+      <div class="faq-column">
+        <h2>WHAT TIME SHOULD I ARRIVE AT THE CEREMONY?</h2>
+        <ul>
+          <li>Please arrive at St. Bernadette no later than 12:45 PM to ensure all guests are seated by the start
+            of the ceremony, which begins promptly at 1:00 PM.</li>
+        </ul>
+      </div>
+      <div class="faq-column">
+        <h2>CAN I BRING A PLUS ONE?</h2>
+        <ul>
+        <li> Due to limited space, we can only accommodate formally invited guests. If you have received a
+        plus one, they will be specifically addressed within the formal invitation. Otherwise, we ask that
+        only the named people in the invitation are in attendance. Thank you for understanding.
+        </li>
+        </ul>
+      </div>
+      <div class="faq-column">
+        <h2>ARE CHILDREN WELCOME?</h2>
+        <ul>
+          <li>As much as we love your little ones, our wedding is exclusively for adults, with the exception of
+        immediate families. Our intention is for you and your spouse to have a fun date night with
+        music, dancing, and not to mention, unlimited drinks and food!</li>
+       
+        </ul>
+      </div>
+      <div class="faq-column">
+        <h2>WILL THERE BE AN OPEN BAR?</h2>
+        <ul>
+          <li>Yes! There will be a cocktail hour before dinner, wine & beer during dinner, and an open bar for
+the party! We want you to have the best time, so the drinks are on us but the hangover is on you!</li>
+        </ul>
+      </div>
+      <div class="faq-column">
+        <h2>CAN I LEAVE MY CAR AT THE VENUE?</h2>
+        <ul>
+          <li>We encourage everyone who will be partaking in the open bar to drink responsibly and utilize
+        rideshare (i.e. Uber or Lyft). If you drive to the reception, our venue will allow wedding guests to
+        leave their cars in the parking lot overnight. Please note, that any damages or stolen property
+        will not not be held responsible by the venue or us.</li>
+        </ul>
+      </div>
+      <div class="faq-column">
+        <h2>WHAT IS THE DRESS CODE?</h2>
+        <ul>
+          <li>The dress code is formal. Male in suits and button ups and females in evening gowns. Please
+        note, during the Catholic Nuptial Blessing please ensure to dress modestly to reflect the
+        reverence for the Nuptial Blessing.</li>
+        </ul>
+      </div>
+       <div class="faq-column">
+        <h2>IS THE WEDDING OUTSIDE?</h2>
+        <ul>
+          <li>The ceremony and reception will be inside but there will be an outdoor cocktail hour prior to
+        dinner. Please dress for a warm autumn night in Arizona. Late October can occasionally get a bit chilly at night, 
+        so please check the forecast low and make sure if you think you might get cold to bring a light jacket.</li>
+        </ul>
+      </div>
+       <div class="faq-column">
+        <h2>WILL YOU HAVE A REGISTRY?</h2>
+        <ul>
+          <li>We sincerely appreciate our guests’ generosity. Our registry will be up prior to sending out our formal invitations. We will also be celebrating the traditional Chinese culture of gifting red envelopes or “li xi” (lucky money) to the bride and groom as well. For those who would like to follow the custom, please provide the li xi to the bride and groom the day-of the wedding in a red envelope to bless their wedding day and married life. </li>
+        </ul>
+      </div>
+       <div class="faq-column">
+        <h2>CAN I TAKE PHOTOS DURING THE CEREMONY?</h2>
+        <ul>
+          <li>We ask that you kindly put your phones and cameras away during the ceremony as we want you all to be present with us in the moment. We have a professional photographer and videographer capturing the ceremony for us. Other than the ceremony, yes! Please feel free to take as many photos and videos as you like.</li>
+        </ul>
+      </div>
+    </div>
+    <footer>
+        <p>A website creation of James Brechtel</p>
+    </footer>
+</body>
+</html>
