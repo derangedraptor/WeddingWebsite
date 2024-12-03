@@ -195,11 +195,17 @@ body {
   font-size: 16pt;
 }
 
+@media (max-width: 1024px) {
+  .faq-container {
+    margin-top: 10%;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
 @media (max-width: 768px) {
   .faq-container {
-    flex-direction: column;
-    text-align: center;
-    justify-content: center;
+    margin-top: 10%;
+    grid-template-columns: 1fr;
   }
 }
 
