@@ -29,13 +29,19 @@ img {
 }
 
 .carousel-container {
-  height: 50vh; /* Relative height for responsiveness */
-  max-height: 500px;
+  height: 65vh; /* Relative height for responsiveness */
+  max-height: 600px;
   overflow: hidden;
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   position: relative;
 
+}
+
+@media carousel-container
+{
+    height: 50vh; /* Relative height for responsiveness */
+    max-height: 500px;
 }
 
 .carousel {
@@ -57,17 +63,18 @@ img {
 
 /* Overlay text styling */
 .overlay-text {
+    white-space: nowrap; /* Prevent line breaks */
     font-family: 'PinyonScript', sans-serif;
     position: absolute;
     top: 50%; /* Center the text vertically */
     left: 50%; /* Center the text horizontally */
     transform: translate(-50%, -50%); /* Adjust to exactly center the text */
-    font-size: 5.2em;
+    font-size: 6.5em;
     font-weight: bold;
     color: white;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Optional: shadow for readability */
     text-align: center;
-    padding: 0 20px; /* Optional: space around the text */
+    padding: 0 10px; /* Optional: space around the text */
     z-index: 10; /* Ensure text stays above the images */
 }
 
