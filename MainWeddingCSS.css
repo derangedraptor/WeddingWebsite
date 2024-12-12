@@ -68,6 +68,12 @@ img {
 }
 
 
+@media (max-width: 480px) {
+    .overlay-text {
+        font-size: 2.3em !important; /* Tweak for very small devices */
+    }
+}
+
 /* Overlay text styling */
 .overlay-text {
     white-space: nowrap; /* Prevent line breaks */
