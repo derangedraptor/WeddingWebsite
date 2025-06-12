@@ -1,48 +1,62 @@
 @font-face {
-    font-family: 'PinyonScript'; /* Name of your custom font */
+    font-family: 'PinyonScript';
     src: url('fonts/PinyonScript-Regular.ttf') format('truetype'),
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
-    font-family: 'Boston'; /* Name of your custom font */
+    font-family: 'Boston';
     src: url('fonts/Boston.ttf') format('truetype'),
     font-weight: normal;
     font-style: normal;
 }
 
 body {
-    font-family: 'Ariel', sans-serif; /* Apply custom font */
+    font-family: 'Boston', sans-serif; /* Apply custom font */
     margin: 0;
     padding: 0;
+    align-items: center;
     background-color: #FFFFF0;
 }
 
-.topnav a:link { 
-  text-decoration: none;
-} 
-.topnav a:visited { 
-  text-decoration: none;
-} 
-.topnav a:hover { 
-  text-decoration: none; }
-} 
-.topnav a:active { 
-  text-decoration: none; 
+
+.namePlate {
+    padding-top: 20pt;
+    background-color: #FFFFF0;
+    font-family: 'PinyonScript', sans-serif;
+    font-size: 24pt;
+    height: 55px;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    text-align: center;
+}
+
+.namePlate h1 {
+    font-size: 1.5em;
+    white-space: pre-line;
+    margin: 5px 0 0;
+}
+
+.topnav {
+    display: flex;
+    background-color: #FFFFF0;
+    height: 100%; /* Height for the topnav bar */
+    justify-content: center;
+    overflow: visible;
+    padding: 15px 15px; /* Spacing around toolbar */
 }
 
 #weddingToolbar a
 {
-    padding-left: 15pt;
-    padding-right: 15pt;
-    padding-top: 25pt;
+    padding: 10pt;
     color: black;
 }
 
 #weddingToolbar {
-    font-family: 'PinyonScript', sans-serif;
-    font-size: 2.2em;
+    font-family: 'Boston', sans-serif;
+    font-size: 21pt;
     text-decoration: none; /* Remove underline */
     color: black;
     border-bottom: 2px solid #ddd; /* Subtle border for definition */
@@ -58,13 +72,17 @@ body {
   transform: scale(1.1); /* Slight enlargement on hover */
 }
 
-.topnav {
-    display: flex;
-    background-color: #FFFFF0;
-    height: 100%; /* Height for the topnav bar */
-    justify-content: center;
-    overflow: visible;
-    padding: 15px 15px; /* Spacing around toolbar */
+.topnav a:link { 
+  text-decoration: none;
+} 
+.topnav a:visited { 
+  text-decoration: none;
+} 
+.topnav a:hover { 
+  text-decoration: none; 
+} 
+.topnav a:active { 
+  text-decoration: none; 
 }
 
 
@@ -94,11 +112,12 @@ body {
 }
 
 .links h1{
+    font-family: 'PinyonScript', sans-serif;
     justify-content: top;
     margin-bottom: 10%;
     white-space: pre-line;
     text-decoration: none;
-    font-size: 25px;
+    font-size: 36px;
     color: white;
     text-align: center;
     display: block;
@@ -107,6 +126,8 @@ body {
 }
 
 .links a:hover {
+    color: #a83232; /* Wedding-themed accent color */
+    transform: scale(1.1); /* Slight enlargement on hover */
     background-color: #575757;
 }
 
@@ -121,47 +142,149 @@ body {
     cursor: pointer;
 }
 
-.hamburger i {
+.hamburger i 
+{
     background-color: #FFFFF0;
     font-size: 24px;
     color: black;
 }
 
-.namePlate {
-    padding-top: 20pt;
-    background-color: #FFFFF0;
-    font-family: 'PinyonScript', sans-serif;
-    font-size: 2em;
-    height: 55px;
-    align-items: center;
-    justify-content: center;
-    color: black;
-    text-align: center;
-}
-
-.namePlate h1 {
-    font-size: 1.2em;
-    white-space: pre-line;
-    margin: 5px 0 0;
-}
-
 .formNav {
-    background-color: #FFFFF0;
-    margin-left: 10%;
-    margin-right: 10%;
-    margin-bottom: 10%;
-    padding: 10px;
+    display: flex;
+    justify-content: center;
+    font-size: 16pt;
 }
 
-#RSVPH1{
-    font-family: 'KugileDemo', sans-serif; /* Apply custom font */
+.formBody{
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    width: 50%;
     text-align: center;
+    justify-content: center;
+    place-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
 }
 
+.form{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+    font-family: "Boston";
+    font-size: 1.2rem;
+}
+
+.formInput{
+    background: none;
+    padding: .8rem 0.5rem 0.4rem 0.5rem; /* top padding for label space */;
+    border: 1px solid;
+    border-radius: 5px;
+    text-align: left; /* Ensure text starts on the left */
+    position: relative; /* Needed for positioning label inside */
+    font-size: 1.2rem;
+    font-family: 'Boston';
+}
+
+.formInput:hover{
+    border-color: darkred;
+}
+
+.formInput:focus {
+    border-color: indianred;
+}
+
+.formLabel{
+    position: absolute;
+    left: 0.5rem; /* Align to the left of the input */
+    top: 50%; /* Vertically centered */
+    transform: translateY(-50%); /* Adjust vertical positioning */
+    font-size: 1rem;
+    color: #888;
+    pointer-events: none; /* Ensure label doesn't interfere with input interaction */
+    transition: 0.2s ease;
+}
+
+.form:focus-within .formLabel,
+.formInput:not(:placeholder-shown) + .formLabel {
+    font-size: 0.85rem;
+    color: indianred;
+    top: -1rem; /* Move label up when input is focused or filled */
+    transform: translateY(0); /* Adjust transform when focused */
+}
+
+.submitButton {
+    width: 35%;
+    margin: 20px 0;
+    padding: 10px 20px;
+    font-size: 16px;;
+    border-radius: 5px;
+    background-color: #505C45;
+    color: white;
+    cursor: pointer;
+}
+
+.submitButton:hover {
+    background-color: #384031;
+}
+
+.peony{
+    width: 200px;
+    height: auto;
+}
+
+
+.radioGroup {
+  display:inline-block;
+  flex-direction: column;
+  align-items: center; /* center the whole group */
+}
+
+.radios {
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.radios input[type="radio"] {
+  width: 16px;
+  height: 16px;
+}
+
+
+.radioTea {
+    display:inline-block;
+    text-align: left;
+}
+
+.radioOption {
+    display: flex;
+    align-items: center;
+    margin: 8px 0;
+    font-size: 16pt;
+}
+
+
+#bobaQ{
+    text-align: center;
+    width: 100%;
+    font-size: 16pt;
+}
+
+#please{
+    text-align: center;
+    width: 100%;
+    font-family: 'Boston', sans-serif;
+    font-size: 18pt;
+    color: indianred;
+    text-decoration: underline;
+}
 
 footer {
     background-color: #384031; 
-    color: white;
+    color: black;
     text-align: center;
     padding: 10px;
 }

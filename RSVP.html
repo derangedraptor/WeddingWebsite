@@ -33,9 +33,9 @@
             <a href="index.html">Home</a>
             <a href="ourstory.html">Our Story</a>
             <a href="WeddingDetails.html">Wedding Details</a>
-            <a href="RSVP.html" style="display: none;">RSVP</a>
-            <a href="#accommodations" style="display: none;">Accommodations</a>
-            <a href="#registry" style="display: none;">Registry</a>
+            <a href="RSVP.html">RSVP</a>
+            <a href="accommodations" style="display: none;">Accommodations</a>
+            <a href="registry.html">Registry</a>
             <a href="WeddingParty.html"> Wedding Party </a>
             <a href="gallery.html">Gallery</a>
             <a href="faq.html">FAQ</a>
@@ -49,9 +49,9 @@
             <a href="index.html">Home</a>
             <a href="ourstory.html">Our Story</a>
             <a href="WeddingDetails.html">Wedding Details</a>
-            <a href="RSVP.html" style="display: none;">RSVP</a>
+            <a href="RSVP.html">RSVP</a>
             <a href="#accommodations" style="display: none;">Accommodations</a>
-            <a href="#registry" style="display: none;">Registry</a>
+            <a href="registry.html">Registry</a>
             <a href="WeddingParty.html"> Wedding Party </a>
             <a href="gallery.html">Gallery</a>
             <a href="faq.html">FAQ</a>
@@ -59,28 +59,51 @@
     </div>
 
     <div id = "formNav" class="formNav">
-        <p>Please respond per individual not per party!</p>
-    
-        <label for="name">Full Name:</label>
-        <input type="text" id="name" name="name" required>
-        <div id="radio1">
-            <p> Will you be attending? </p>
-                <input type="radio" id="accepted" name="attending" value="yes">
-                <label for="accept">Accept</label>
-                <input type="radio" id="declined" name="attending" value="no">
-                <label for="decline">Decline</label>
-        </div><br>
-        <div id = "radio2">
-        <p>Please select your entree of choice</p>
-            <input type="radio" id="meat" name="meal" value="Meat">
-            <label for="meat">Meat</label>
-            <input type="radio" id="vegetarian" name="meal" value="Vegetarian">
-            <label for="vegetarian">Vegetarian</label>
-        </div><br>
-        <label for="dietRestrictions">Dietary Restrictions:</label>
-        <input type="text" id="dietRestrictions" name="dietRestrictions" required><b></b>
-
-        <button type="submit" onclick="sendMail()">Submit</button>
+        <div class = "formBody">
+            <img src="photos/peony.png" alt="peony.png" class="peony">
+            <p id="please">Please respond per individual!</p>
+            <div class ="form">
+                <input type="text" id="guestName" class="formInput" placeholder=" " onautocomplete="off" required>
+                <label for="guestName" class="formLabel">Full Name:</label>
+            </div>
+            <div class = "radioGroup">
+                <div class = "radios" id="radio1">
+                    <p> Will you be attending? </p>
+                        <input type="radio" id="accepted" name="attending" value="yes">
+                        <label for="accept">Accept</label>
+                        <input type="radio" id="declined" name="attending" value="no">
+                        <label for="decline">Decline</label>
+                </div>
+            </div>
+            <div class = "form" id="songRecDiv">
+                <input type="text" id="songRecID" class="formInput" placeholder=" " onautocomplete="off" required><b></b>
+                <label for="songRecID" class="formLabel">Favorite Dance Song:</label>
+            </div>
+            <p id="bobaQ">What type of boba tea would you like?</p>
+            <div class="radioTea">
+                <div class="radioOption">
+                  <input type="radio" id="tea1" name="boba" value="MilkTea">
+                  <label for="tea1">Milk Tea</label>
+                </div>
+                <div class="radioOption">
+                  <input type="radio" id="tea2" name="boba" value="BlackTea">
+                  <label for="tea2">Black Tea</label>
+                </div>
+                <div class="radioOption">
+                  <input type="radio" id="tea3" name="boba" value="GreenTea">
+                  <label for="tea3">Green Tea</label>
+                </div>
+                <div class="radioOption">
+                  <input type="radio" id="tea4" name="boba" value="PinkBeauty">
+                  <label for="tea4">Grapefruit fruit tea with aloe</label>
+                </div>
+                <div class="radioOption">
+                  <input type="radio" id="notea" name="boba" value="NoTea">
+                  <label for="notea">No tea for me!</label>
+                </div>
+            </div>  
+            <button type="submit" class="submitButton" onclick="sendMail()">Submit</button>
+        </div>
     </div>
     <footer>
         <p>A website creation of James Brechtel</p>
