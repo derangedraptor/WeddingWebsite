@@ -79,7 +79,7 @@ body {
   text-decoration: none;
 } 
 .topnav a:hover { 
-  text-decoration: none; }
+  text-decoration: none; 
 } 
 .topnav a:active { 
   text-decoration: none; 
@@ -213,7 +213,7 @@ body {
 
 footer {
     background-color: #384031; 
-    color: black;
+    color: white;
     text-align: center;
     padding: 10px;
 }
@@ -223,4 +223,5 @@ footer a {
     text-decoration: none;
     margin: 0 5px;
 }
+
 

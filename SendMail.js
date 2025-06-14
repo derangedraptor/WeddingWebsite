@@ -1,10 +1,10 @@
 function sendMail()
 {
     let parms = {
-        name : document.getElementById("name").value,
+        name : document.getElementById("guestName").value,
         attending: document.querySelector('input[name="attending"]:checked').value,
-        meal: document.querySelector('input[name="meal"]:checked').value,
-        dietRestrictions : document.getElementById("dietRestrictions").value,
+        song: document.getElementById("songRecID").value,
+        boba: document.querySelector('input[name="boba"]:checked').value,
     }
 
     emailjs.send('service_jamesNCammy', 'template_tffkptk', 
