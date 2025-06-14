@@ -282,9 +282,80 @@ body {
     text-decoration: underline;
 }
 
+
+
+@media (max-width: 600px) {
+  .formBody {
+    width: 90%;
+    padding: 10px;
+  }
+
+  .form {
+    width: 100%;
+  }
+
+  .formInput {
+    font-size: 1rem;
+  }
+
+  .submitButton {
+    width: 80%;
+    font-size: 1rem;
+  }
+
+  .peony {
+    width: 120px;
+  }
+
+  .links h1 {
+    font-size: 28px;
+  }
+
+  .links a {
+    font-size: 20px;
+    padding: 10px;
+  }
+
+  #please, #bobaQ {
+    font-size: 14pt;
+  }
+
+  .radioOption {
+    font-size: 14pt;
+  }
+
+  footer {
+    font-size: 12pt;
+  }
+}
+
+@media (max-width: 600px) {
+  footer {
+    background-color: #384031;  /* Keep original */
+    color: white;               /* Keep original */
+    text-align: center;
+    padding: 15px 10px;         /* Slightly more padding for touch targets */
+    font-size: 14px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    line-height: 1.4;
+  }
+
+  footer a {
+    color: #E0E3F4;             /* Keep original */
+    text-decoration: none;
+    margin: 6px 0;              /* Stack links vertically */
+    font-size: 14px;
+    display: block;             /* Make each link its own row */
+  }
+}
+
+
+
 footer {
     background-color: #384031; 
-    color: black;
+    color: white;
     text-align: center;
     padding: 10px;
 }

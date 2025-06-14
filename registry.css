@@ -79,7 +79,7 @@ body {
   text-decoration: none;
 } 
 .topnav a:hover { 
-  text-decoration: none; }
+  text-decoration: none; 
 } 
 .topnav a:active { 
   text-decoration: none; 
@@ -142,126 +142,145 @@ body {
     cursor: pointer;
 }
 
-.hamburger i {
+.hamburger i 
+{
     background-color: #FFFFF0;
     font-size: 24px;
     color: black;
 }
 
-.row {
-    justify-content: center;
+.gift-message {
+    border: 2px solid #f2e3d5;
+    border-radius: 12px;
+    padding: 30px 20px;
     text-align: center;
+    font-family: 'Georgia', serif;
+    color: #333;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.gift-message h2 {
+    font-size: 28px;
+    margin-bottom: 16px;
+}
+
+.gift-message p {
+    font-size: 20px;
+    line-height: 1.6;
+}
+
+.registry-icons {
     display: flex;
-    flex-wrap: wrap;
-    margin-bottom: 2%;
-}
-
-/* Create four equal columns that sits next to each other */
-.column {
-    flex: 25%;
-    max-width: 20%;
-    padding: 0 4px;
-}
-
-.column img {
-    margin-top: 8px;
-    vertical-align: middle;
-    width: 95%; /* Image scales with the column */
-    cursor: pointer; /* Interactive cursor */
-    transition: transform 0.3s; /* Hover effect */
-}
-
-
-/* Mobile View */
-@media () {
-    .row {
-        justify-content: center;
-        text-align: center;
-        display: flex;
-        flex-wrap: wrap;
-        margin-bottom: 5%;
-        gap: 10px; /* Add spacing between columns */
-    }
-}
-
-/* Two-column layout for smaller screens */
-@media (max-width: 768px) {
-    .column {
-        flex: 0 1 calc(50% - 10px); /* Two columns */
-        max-width: calc(50% - 10px);
-    }
-}
-
-.column img:hover {
-    transform: scale(1.05); /* Slight enlargement on hover */
-}
-
-/* Fullscreen Modal Styles */
-.fullscreen-modal {
-    display: none; /* Hidden by default */
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.9); /* Dark overlay */
-    justify-content: center;
+    flex-direction: row;
     align-items: center;
-    z-index: 9999; /* Place above other content */
+    gap: 40px;
+    justify-content: center;  /* Centers horizontally */
+    padding: 40px 0;
 }
 
-.fullscreen-modal img {
-    max-width: 90%;
-    max-height: 90%;
-    object-fit: contain; /* Ensure proper scaling */
-}
-
-.fullscreen-modal:target {
-    display: flex; /* Show the modal when targeted */
-}
-
-.container {
-    display: none;
-}
-
-.container.active {
-    display: block;
-}
-
-.photogrid, .seattle, .proposal {
-    padding: 10px;
-    border: 1px solid #ccc;
-    margin: 10px 0;
-    border-radius: 8px;
-    background-color: #f9f9f9;
-}
-
-.buttons {
-    display: flex;
+.registry-icons a {
     text-align: center;
-    align-content: center;  
-    justify-content: center;
-    gap: 25px;
+    text-decoration: none;
+    color: #333;
+    width: 250px;
+    height: 120px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center; /* Centers image and text */
+    border-radius: 15px;
+    background-color: #fff;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease;
 }
 
-button
-{
-    gap: 25px; /* Space between buttons */
-    margin: 20px 0;
-    padding: 10px 15px;
+.registry-icons img {
+    width: 80%;  /* Ensure the logo fills the container while staying within bounds */
+    height: auto;
+    object-fit: contain; /* Adjusts to fit within the box */
+}
+
+.registry-icons img:hover {
+    transform: scale(1.1);
+}
+
+.venmo-section {
+    text-align: center;
+    padding: 20px 20px;
+    border-radius: 12px;
+}
+
+.venmo-section img {
+    width: 180px;
+    height: 180px;
+    margin-bottom: 16px;
+    border-radius: 12px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+.venmo-section a {
+    display: column;
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    text-decoration: none;
+}
+
+.venmo-username {
+    font-size: 18px;
+    font-weight: bold;
+    color: #000;
+}
+
+@media (max-width: 1024px) {
+    .gift-message h2 {
+        font-size: 24px;
+        margin-bottom: 16px;
+    }
+
+    .gift-message p {
+        font-size: 16px;
+        line-height: 1.6;
+    }
+}
+
+@media (max-width: 1024px) {
+  .faq-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .faq-container {;
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+    .registry-icons {
+        flex-direction: column;
+    }
+
+    .registry-icons a {
+        color: #333;
+        width: 200px;
+        height: 100px;
+    }
+}
+
+.venmoLink {
+    display: inline-block;
+    background-color: #505C45;;
+    color: #fff !important;
+    padding: 10px 20px;
+    text-decoration: none;
     border-radius: 5px;
-    background-color: #505C45;
-    color: white;
-    cursor: pointer;
 }
 
-button:hover {
+.venmoLink:hover {
     background-color: #384031;
-}
-
-.proposal img
-{
-    width: 100%;
 }
 
 footer {
@@ -276,4 +295,3 @@ footer a {
     text-decoration: none;
     margin: 0 5px;
 }
-

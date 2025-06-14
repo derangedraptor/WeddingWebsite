@@ -20,6 +20,17 @@
     <script src="SendMail.js"></script>
 </head>
 <body onload="handleDeviceSpecificCode()">
+    <script>
+  // Simple password protection
+  const password = "VowOrNever";
+
+  const userInput = prompt("Please enter RSVP password:");
+
+  if (userInput !== password) {
+    alert("Incorrect password!");
+    window.location.href = "index.html"; // redirect if incorrect
+  }
+</script>
     <div class = "namePlate" id="nameplate">
         <h1>RSVP</h1>
     </div>
@@ -83,19 +94,19 @@
             <div class="radioTea">
                 <div class="radioOption">
                   <input type="radio" id="tea1" name="boba" value="MilkTea">
-                  <label for="tea1">Milk Tea</label>
+                  <label for="tea1">Boba Milk Tea</label>
                 </div>
                 <div class="radioOption">
                   <input type="radio" id="tea2" name="boba" value="BlackTea">
-                  <label for="tea2">Black Tea</label>
+                  <label for="tea2">Thai Tea</label>
                 </div>
                 <div class="radioOption">
                   <input type="radio" id="tea3" name="boba" value="GreenTea">
-                  <label for="tea3">Green Tea</label>
+                  <label for="tea3">Jasmine Green Tea</label>
                 </div>
                 <div class="radioOption">
                   <input type="radio" id="tea4" name="boba" value="PinkBeauty">
-                  <label for="tea4">Grapefruit fruit tea with aloe</label>
+                  <label for="tea4">Pink Beauty (Grapefruit fruit tea)</label>
                 </div>
                 <div class="radioOption">
                   <input type="radio" id="notea" name="boba" value="NoTea">
