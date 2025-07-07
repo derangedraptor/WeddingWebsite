@@ -7,8 +7,15 @@ function sendMail()
         boba: document.querySelector('input[name="boba"]:checked').value,
     }
 
-    emailjs.send('service_jamesNCammy', 'template_tffkptk', 
-    parms).then(alert("RSVP Sent!"))
+    emailjs.send('service_jamesNCammy', 'template_tffkptk', parms)
+        .then(function(response) {
+            alert("RSVP Sent!");
+            location.reload(); // ✅ Refresh AFTER alert
+        })
+        .catch(function(error) {
+            console.error("Failed to send RSVP:", error);
+            alert("There was an error sending your RSVP. Please try again.");
+        });
 }
 
 /* Toggle between showing and hiding the navigation menu links when the user clicks on the hamburger menu / bar icon */
@@ -40,3 +47,4 @@ function handleDeviceSpecificCode()
     toolbar.style.display = "flex";
   }
 }
+

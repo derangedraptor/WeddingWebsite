@@ -203,9 +203,19 @@ img {
     margin-top: 30pt;
 }
 
+#location-images img{
+    border: 1.5px solid #000;
+    border-radius: 5px;
+}
+
+#venuePic{
+    max-height: 30%;
+    max-width: 50%;
+}
+
 .column img {
-    max-height: 70%;
-    max-width: 70%;
+    max-height: 50%;
+    max-width: 60%;
     display: inline-block;
     vertical-align:middle;
 }
@@ -329,7 +339,7 @@ img {
 
 .map-link {
     display: inline-block;
-    background-color: #505C45;;
+    background-color: #505C45;
     color: #fff;
     padding: 10px 20px;
     text-decoration: none;

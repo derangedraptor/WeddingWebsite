@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<!-- Load an icon library to show a hamburger menu (bars) on small screens -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Wedding</title>
+    <link rel="stylesheet" href="accommodations.css">
+    <script type = "text/javascript" src="weddingJavaScript.js"></script>
+</head>
+<body onload="handleDeviceSpecificCode()">
+    
+    <!-- NamePlateSection -->
+    <div class = "namePlate" id="nameplate">
+        <h1>Frequently Asked Questions</h1>
+    </div>
+
+    <!-- Top Navigation Menu -->
+    <div class="topnav">
+        <!-- Navigation links (hidden by default) -->
+        <div class="links" id="myLinks">
+            <h1> Cammy & James 
+        October 25th, 2025 </h1>
+            <a href="index.html">Home</a>
+            <a href="ourstory.html">Our Story</a>
+            <a href="WeddingDetails.html">Wedding Details</a>
+            <a href="RSVP.html">RSVP</a>
+            <a href="accommodations.html">Accommodations</a>
+            <a href="registry.html">Registry</a>
+            <a href="WeddingParty.html"> Wedding Party </a>
+            <a href="gallery.html">Gallery</a>
+            <a href="faq.html">FAQ</a>
+        </div>
+        <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
+        <a href="javascript:void(0);" class="hamburger" id="hamburger" onclick="hamburgerDrop()" style="display: none;">
+            <i class="fa fa-bars"></i>
+        </a>
+        <!-- "Toolbar menu" / "Toolbar for nav links"-->
+        <nav id="weddingToolbar" style="display: none;">
+            <a href="index.html">Home</a>
+            <a href="ourstory.html">Our Story</a>
+            <a href="WeddingDetails.html">Wedding Details</a>
+            <a href="RSVP.html">RSVP</a>
+            <a href="accommodations.html">Accommodations</a>
+            <a href="registry.html">Registry</a>
+            <a href="WeddingParty.html"> Wedding Party </a>
+            <a href="gallery.html">Gallery</a>
+            <a href="faq.html">FAQ</a>
+        </nav>
+    </div>
+    <div class="faq-container">
+      <p class="intro"> Here is a list of reputable local amenities, fun things to do, and good places to eat. The hotels below are some local suggested places, but please feel free to stay where you like as we do not have any rooms in these hotels blocked for the wedding.</p>
+      <div class="faq-column">
+        <h1 class="text-lg text-gray-600 mb-8">
+          Hotels
+        </h1>
+        <div class="subsection">
+          <div class="accommodation-item">
+            <h3>Tru by Hilton Scottsdale Salt River</h3>
+            <p>8401 N Pima Center Pkwy, Scottsdale, Arizona, 85258</p>
+            <a href="https://www.hilton.com/en/hotels/phxscru-tru-scottsdale-salt-river/" class="map-link" target="_blank">Book</a>
+          </div>
+          <div class="accommodation-item">
+            <h3>The Westin Kierland Villas, Scottsdale</h3>
+            <p>15620 N Clubgate Dr, Scottsdale, AZ 85254</p>
+            <a href="https://www.marriott.com/en-us/hotels/phxwk-the-westin-kierland-villas-scottsdale/overview/" class="map-link" target="_blank">Book</a>
+          </div>
+          <div class="accommodation-item">
+            <h3>Embassy Suites by Hilton Scottsdale Resort</h3>
+            <p>5001 N. Scottsdale Road, Scottsdale, Arizona, 85250</p>
+            <a href="https://www.hilton.com/en/hotels/scteses-embassy-suites-scottsdale-resort/" class="map-link" target="_blank">Book</a>
+          </div>
+        </div>
+      </div>
+      <div class="faq-column">
+        <h1 class="text-lg text-gray-600 mb-8">
+          Scottsdale
+        </h1>
+        <div class="subsection">
+          <h2>Dining</h2>
+           <div class="accommodation-item">
+            <h3>Élephante Scottsdale</h3>
+            <p> 7014 E Camelback Rd #601, Scottsdale, AZ 85251</p>
+            <a href="https://www.elephanterestaurants.com/" class="map-link" target="_blank>Website"> Website </a>
+          </div>
+          <div class="accommodation-item">
+            <h3>Lo-Lo's Chicken and Waffles</h3>
+            <p> 3133 N Scottsdale Rd, Scottsdale, AZ 85251</p>
+            <a href="https://loloschickenandwaffles.com/location/scottsdale/" class="map-link" target="_blank>Website"> Website </a>
+          </div>
+        </div>
+        <div class="subsection">
+          <h2>Things to do</h2>
+          <div class="accommodation-item">
+            <h3>Medieval Times</h3>
+            <p>9051 East Vía de Ventura, Scottsdale, AZ 85258</p>
+            <a href="https://www.medievaltimes.com/promotion/arizona-savings?utm_source=google&utm_medium=cpc&utm_campaign=Scottsdale%20-%20Search%20-%20Non-Brand%20-%20TTD%20-%20Tickets%20%26%20Tours&gad_source=1&gad_campaignid=21675531500&gbraid=0AAAAADiJS7IrB7ru48Oc5wv6x1NJ-8hKM&gclid=Cj0KCQjw1JjDBhDjARIsABlM2SuJS4m5myjtht7NQcPTFWoYm3e6EWtoihvSy5aym3OhKHtWqdS0FqcaAuh6EALw_wcB&gclsrc=aw.ds" class="map-link" target="_blank">Website</a>
+          </div>
+          <div class="accommodation-item">
+            <h3>Puttshack</h3>
+            <p>15059 N Scottsdale Rd, Scottsdale, AZ 85254</p>
+            <a href="https://www.puttshack.com/locations/scottsdale/" class="map-link" target="_blank">Website</a>
+          </div>
+        </div>
+      </div>
+      <div class="faq-column">
+        <h1 class="text-lg text-gray-600 mb-8">
+          Gilbert
+        </h1>
+        <div class="subsection">
+          <h2>Dining</h2>
+          <div class="accommodation-item">
+            <h3>Joe's Farm Grill</h3>
+            <p>3000 E Ray Rd, Gilbert, AZ 85296</p>
+             <a href="https://www.joesfarmgrill.com/" target="_blank" class="map-link">Website</a>
+          </div> 
+          <div class="accommodation-item">
+            <h3>Salt & Straw Ice Cream</h3>
+            <p>3150 E Ray Rd #178, Gilbert, AZ 85296</p>
+            <a href="https://saltandstraw.com/" target="_blank" class="map-link">Website</a>
+          </div>  
+          <div class="accommodation-item">
+            <h3>UnderTow (Carribean themed bar)</h3>
+            <p>3150 E Ray Rd Suite 184, Gilbert, AZ 85296</p>
+            <a href="https://bartershake.com/undertow/?utm_source=gbp" target="_blank" class="map-link">Website</a>
+          </div>  
+          <div class="accommodation-item">
+            <h3>Whiskey Row (American Eatery with live music and bar)</h3>
+            <p>323 N Gilbert Rd, Gilbert, AZ 85234</p>
+            <a href="https://dierkswhiskeyrow.com/gilbert-az/" target="_blank" class="map-link">Website</a>
+          </div>  
+        </div>
+         <div class="subsection">
+          <h2>Things to do</h2>
+          <div class="accommodation-item">
+            <h3>Top Golf</h3>
+            <p>1689 S Santan Village Pkwy, Gilbert, AZ 85295</p>
+            <a href="https://topgolf.com/us/gilbert/" target="_blank" class="map-link">Website</a>
+          </div>
+          <div class="accommodation-item">
+            <h3>ClueMaster Escape Rooms</h3>
+            <p>425 W Guadalupe Rd #117, Gilbert, AZ 85233</p>
+            <a href="https://www.escaperoomsgilbert.com/?gad_source=1&gad_campaignid=21195105339&gbraid=0AAAAABNrryfU7F1As3YHlh2yI_rRGtVQL&gclid=Cj0KCQjwvajDBhCNARIsAEE29WqnQBfzP0AuqtfB6LHfF2liAgr3YcPYKpRbgyCxuyZ1Yfnxlu1bEV4aAsoMEALw_wcB#4m" target="_blank" class="map-link">Website</a>
+          </div> 
+        </div>
+      </div>
+       <div class="faq-column">
+        <h1 class="text-lg text-gray-600 mb-8">
+          Mesa
+        </h1>
+        <div class="subsection">
+          <h2>Dining</h2>
+          <div class="accommodation-item">
+            <h3>Mensho Ramen</h3>
+            <p>G805 N Dobson Rd #115, Mesa, AZ 85201</p>
+            <a href="https://mensho.com/" target="_blank" class="map-link">Website</a>
+          </div>
+           <div class="accommodation-item">
+            <h3>Gus's World Famous Fried Chicken</h3>
+            <p>212 W Main St, Mesa, AZ 85201</p>
+            <a href="https://www.gusfriedchicken.com/" target="_blank" class="map-link">Website</a>
+          </div>
+          <div class="accommodation-item">
+            <h3>Original Cuisine (Authentic Szachuan Style Chinese)</h3>
+            <p>1853 W Broadway Rd, Mesa, AZ 85202</p>
+            <a href="https://www.ocmesa.com/" target="_blank" class="map-link">Website</a>
+          </div>  
+        </div>
+         <div class="subsection">
+          <h2>Things to do</h2>
+          <div class="accommodation-item">
+            <h3>Fat Cats Mesa</h3>
+            <p>5846 E Longbow Pkwy, Mesa, AZ 85215</p>
+            <a href="https://www.fatcatsfun.com/locations/mesa/" target="_blank" class="map-link">Website</a>
+          </div>  
+          <div class="accommodation-item">
+            <h3>Starfighters Arcade</h3>
+            <p>4840 E Jasmine St #102, Mesa, AZ 85205</p>
+            <a href="https://www.starfightersarcade.com/" target="_blank" class="map-link">Website</a>
+          </div>  
+        </div>
+      </div>
+    </div>
+    <footer>
+        <p>A website creation of James Brechtel</p>
+    </footer>
+</body>
+</html>

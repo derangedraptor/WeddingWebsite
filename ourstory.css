@@ -151,11 +151,16 @@ body {
 
 .ourstorydetails
 {
-    font-size: 16pt;
-    font-family: 'Georgia', sans-serif;
-    justify-content: center;
+    border: 2px solid #f2e3d5;
+    border-radius: 12px;
+    padding: 30px 20px;
     text-align: center;
-    margin: 5%;
+    font-family: 'Georgia', serif;
+    font-size: 16pt;
+    color: #333;
+    max-width: 70%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .row {
@@ -179,6 +184,7 @@ body {
     width: 95%; /* Image scales with the column */
     cursor: pointer; /* Interactive cursor */
     transition: transform 0.3s; /* Hover effect */
+    border-radius: 5px;
 }
 
 
